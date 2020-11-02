@@ -1,2 +1,2 @@
-# HybrideApps
+# HybrideApps aanpassing
 Opleiding Hybride Apps
