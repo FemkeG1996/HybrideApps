@@ -1,0 +1,52 @@
+body{
+    background-color: lightskyblue;
+    margin: 0;
+}
+
+#div1
+{
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    height: 25px;
+    width: 100%;
+    font-size: 20px;
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: 3%;
+    background-color: green;
+}
+#div2 
+{  
+    width: 80%;    
+    height: 220px;
+    font-size: 15px;
+    margin-left: 10%;
+    margin-bottom: 3%;
+    background-color: lightgreen;
+}
+#div3
+{
+    width: 80%;
+    height: 150px;
+    margin-top: 2%;
+    margin-left: 10%;
+    background-color: yellowgreen;
+}
+#div4 {
+    width: 50%;
+    height: 70px;
+    margin-left: 25%;
+    margin-top: 8%;
+    position: relative;
+    background-color : yellow;
+    
+}
+div {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    background-color: blue;
+}
+#div2:hover
+{
+    margin-left: 20%;
+}
