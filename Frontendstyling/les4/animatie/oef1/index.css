@@ -1,0 +1,23 @@
+@keyframes vallen{
+    to{
+        transform: translate(0px,100vh) rotate(360deg);
+        
+    }
+}
+div{
+    
+    float: left;
+}
+#een{
+   
+    animation-duration: 5s; 
+    animation-name:vallen;   
+}
+#twee{
+    animation-duration: 6s;
+    animation-name: vallen;
+}
+#drie{
+    animation-duration: 7s;
+    animation-name: vallen;
+}

@@ -52,7 +52,8 @@ nav ul li a{
 }
 nav ul li a:hover
 {
-    color: yellow;
+    background-color: yellow;
+    letter-spacing: 5px;
 }
 nav ul li a:focus{
     color: firebrick;

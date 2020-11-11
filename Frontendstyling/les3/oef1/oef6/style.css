@@ -1,0 +1,12 @@
+div{
+    height: 100px;
+    text-align: center;
+    border: 5px dashed goldenrod;
+    width: 80%;
+    padding:50px 0;
+    margin: auto;
+}
+p{
+    padding-top: 50px;
+    text-align: center;
+}

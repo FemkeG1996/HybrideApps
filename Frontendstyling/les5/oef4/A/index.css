@@ -1,0 +1,16 @@
+body{
+    font-family:Arial;
+    }
+    .opmaak {
+    background-color: darkorchid;
+    color:white;
+    margin:50px;
+    padding:15px;
+    width:150px;
+    height:150px;
+    border:5px solid black;
+    text-align:center;
+    }
+    hr{
+    margin-top:50px;
+    }

@@ -1,0 +1,25 @@
+main {
+    height: 500px;
+    width: 10px;
+}
+
+.figuurcirkel {
+    margin-top: 0px;
+    position: absolute;
+    border: 50px solid black;
+    border-radius: 150px;
+}
+
+.figuurrechthoek {
+    position: absolute;
+    border: 50px solid orange;
+    margin-top: 50px;
+}
+
+.figuurronderand {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 50px;
+    border: 50px solid blue;
+    border-radius: 10px;
+}

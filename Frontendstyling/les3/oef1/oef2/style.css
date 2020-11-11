@@ -1,0 +1,22 @@
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+strong{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.prood{
+    color: red;
+}
+.pgroen{
+    color: green;
+}
+#centreer{
+    text-align: center;
+}
+p strong{
+    color: blue;
+}

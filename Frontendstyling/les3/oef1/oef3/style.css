@@ -1,0 +1,26 @@
+.blok{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    float: left;
+}
+.zwart{
+    background-color: black;
+  
+}
+.rood{
+    background-color: red;
+
+}
+.geel{
+    background-color: yellow;
+
+}
+p{
+    clear: both;
+    text-align: center;
+}
+.kader{
+    width: 150px;
+    margin: 0 auto;
+}

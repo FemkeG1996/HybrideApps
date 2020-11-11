@@ -1,0 +1,58 @@
+
+body {
+    background-image: url(../Afbeeldingen/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+a {
+    color: gold;
+}
+
+header {
+    border: 10px solid grey;
+    height: 200px;
+    font-size: 15px;
+    background-color: rgba(216, 35, 126, 0.3);
+    color: gold;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    font-weight: 700;
+}
+
+nav ul li {
+    font-family: 'Indie Flower', cursive;
+    list-style: none;
+    font-size: 22px;
+    margin-top: 50px;
+    height: 50px;
+    width: 20%;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: inherit;
+}
+
+nav ul li :hover {
+    margin-bottom: 100px;
+}
+
+nav ul li .text {
+    margin-top: 80px;
+    visibility: hidden;
+}
+
+.text {
+    color: gold;
+}
+
+nav ul li:hover .text {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid lightgrey;
+    visibility: visible;
+}

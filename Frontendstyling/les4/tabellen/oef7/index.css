@@ -1,0 +1,35 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+
+}
+.contain{
+    background-color: gray;
+}
+.figuren{
+    width: 100px;
+    height: 100px;
+    
+}
+
+.figuurcirkel{
+
+    position: absolute;
+    border: 50px solid black;
+    border-radius: 150px;
+    margin-bottom: 10px;
+}
+.figuurrechthoek{
+
+    position: absolute;
+    border: 50px solid orange;
+    margin-bottom: 10px;
+}
+.figuurronderand{
+
+    position: absolute;
+    border: 50px solid blue;
+    border-radius: 10px;
+}

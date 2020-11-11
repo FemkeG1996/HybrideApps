@@ -9,7 +9,7 @@ body{
     text-align: center;
     height: 25px;
     width: 100%;
-    font-size: 20px;
+    font-size: 15px;
     margin: 0;
     margin-top: 0;
     margin-bottom: 3%;
@@ -19,7 +19,7 @@ body{
 {  
     width: 80%;    
     height: 220px;
-    font-size: 15px;
+    font-size: 20px;
     margin-left: 10%;
     margin-bottom: 3%;
     background-color: lightgreen;
@@ -31,6 +31,7 @@ body{
     margin-top: 2%;
     margin-left: 10%;
     background-color: yellowgreen;
+    font-size: 25px;
 }
 #div4 {
     width: 50%;
@@ -39,7 +40,10 @@ body{
     margin-top: 8%;
     position: relative;
     background-color : yellow;
-    
+    font-size: 30px;
+    color: red;
+    transform: translateY(-25%);
+
 }
 div {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);

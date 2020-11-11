@@ -1,0 +1,13 @@
+ul {
+    padding: 0;
+    margin: 0;
+    background-color: lightgray;
+    }
+    ul li {
+        float: left;
+        list-style: none;
+        background-color: lightgray;
+        border: 2px dotted deepskyblue;
+        padding: 10px;
+       margin-bottom: 5px;
+    }

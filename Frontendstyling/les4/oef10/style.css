@@ -1,0 +1,34 @@
+.figuur{
+    
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+.contain{
+    width: 500px;
+    height: 500px;
+    background-color: grey;
+    align-content: center;
+}
+.cirkel{
+    margin-left:  0px;
+    background-color: black;
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+}
+
+.rechthoek{
+    margin-left:  0px;
+    background-color: rgb(255, 193, 36);
+    position: absolute;
+    top: 50px;
+}
+
+.ronderand{
+    background-color: blue;
+    border-radius: 25px;
+    position: absolute;
+    top: 50px;
+    margin-left: 75px;
+}

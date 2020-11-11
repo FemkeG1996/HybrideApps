@@ -1,0 +1,17 @@
+h1{
+color: grey;
+}
+h2{
+    color: lightgray;
+    margin-bottom: 10px;
+}
+
+div{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top-style:solid ;
+    border-color: gray;
+    border-bottom-style: solid;
+
+}
