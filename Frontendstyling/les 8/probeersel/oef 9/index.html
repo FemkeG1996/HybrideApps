@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+       background-color: rgb(237, 237, 237);
+    }
+    img {
+        width: 300px;
+        height: 300px;
+    }
+    header {
+
+        margin-left: 10%;
+        width: 100vw;
+        display: flex;
+        margin-bottom: 50px;
+
+    }
+
+    #profielfoto {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+    }
+
+    #tekst {
+        margin-left: 10%;
+        font-size: 30px;
+
+    }
+    #links{
+        margin-left: 5%;
+    }
+    a{
+        border: 1px solid black;
+        width: 50px;
+        padding-left: 20px;
+        padding-right: 20px ;
+        margin-left: 10px;
+        font-size: 20px;
+    }
+    p{
+        font-size: 20px;
+    }
+
+nav ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+}
+nav ul li .text{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -305px;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    color: white;
+    transition: 0.8s;
+
+}
+nav ul li{
+    list-style-type: none;
+}
+nav ul li:hover .text{
+    opacity: 1;
+    visibility: visible;
+}
+i{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+</style>
+
+<body>
+    <header>
+
+        <img id="profielfoto" src="afb/foto5.jpg" alt="">
+        <div id="tekst">
+            Fempichu <a>Profiel</a> <i class="fas fa-cog"></i>
+           <p id="links">
+            150 posts 1885 volgers 124 volgend
+        </p>
+          <p>
+            Fempichu Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        </p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <img src="afb/foto3.jpg" alt="">  
+                <nav class="text">
+                    85 Likes 3 comments 
+                </nav>
+            </li>
+            <li>
+                <img src="afb/foto5.jpg" alt="">  
+                <nav class="text">
+                    92 Likes 1 comment 
+                </nav>
+            </li>
+            <li>
+                <img src="afb/foto4.jpg" alt="">  
+                <nav class="text">
+                    75 Likes 3 comments 
+                </nav>
+            </li>
+
+            <li>
+                <img src="afb/foto15.jpg" alt="">  
+                <nav class="text">
+                    90 Likes 4 comments 
+                </nav>
+            </li>
+            <li>
+                <img src="afb/foto17.jpg" alt="">  
+                <nav class="text">
+                    100 Likes 3 comments 
+                </nav>
+            </li>
+            <li>
+                <img src="afb/foto22.jpg" alt="">  
+                <nav class="text">
+                    87 Likes 3 comments 
+                </nav>
+            </li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>

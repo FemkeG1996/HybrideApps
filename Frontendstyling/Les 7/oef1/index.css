@@ -1,0 +1,54 @@
+.blokje{
+
+    height: 15em;
+    width: 15em;
+    background-color: green;
+    border: 1px solid #cdcdcd;
+
+   
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@media (min-width : 600px ){
+
+    .blokje{
+
+        background-color: red;
+        justify-content: center;
+        align-content: center;
+
+    }
+
+}
+
+@media (min-width : 700px ){
+
+    .blokje{
+        background-color: yellow;
+        justify-content: center;
+        align-content: center;
+    }
+
+}
+@media (min-width : 900px){
+    .blokje{
+        background-color: purple;
+        justify-content: center;
+        align-content: center;
+    }
+
+}
+
+@media (min-width : 1200px){
+    .blokje{
+        background-color: blue;
+        justify-content: center;
+        align-content: center;
+    }
+
+}

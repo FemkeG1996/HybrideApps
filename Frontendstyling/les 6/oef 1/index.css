@@ -1,0 +1,28 @@
+body{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(200px,1fr));
+    grid-gap: 1em;
+}
+img{
+    padding-left: 10%;
+    width: 75%;
+    
+}
+.text{
+
+border: 2px solid grey  ;
+text-align: justify;
+padding-left: 20px;
+padding-right: 20px;
+font-family: 'Bangers', cursive;
+
+}
+button{
+    width: 75%;
+    padding: 10px;
+    background-color: grey;
+    margin-bottom: 10px;
+    color: white;
+    font-family: 'Bangers', cursive;
+}

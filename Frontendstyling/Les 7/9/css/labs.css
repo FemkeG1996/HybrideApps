@@ -1,0 +1,70 @@
+form {
+    font-family: Arial;
+    font-weight: bold;
+    text-align: center;
+}
+
+fieldset {
+    border-radius: 10px;
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgb(38, 175, 38);
+    background-image: linear-gradient(red, orange, rgb(66, 158, 66));
+}
+
+legend {
+    text-align: center;
+}
+
+input {
+    text-align: center;
+    font-weight: bold;
+}
+
+input[type=text] {
+    width: 45%;
+}
+
+input[type=range] {
+    width: 45%;
+}
+
+input[type=submit] {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 25%;
+    padding: auto;
+    background-color: rgb(66, 158, 66);
+    height: 2em;
+}
+
+div {
+    text-align: center;
+}
+
+.slider {
+    -webkit-appearance: none;
+    height: 5px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    border: 0.25px solid black;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}

@@ -1,0 +1,6 @@
+input{
+    background-color: darkgray;
+}
+input:focus{
+background-color: blue;
+}

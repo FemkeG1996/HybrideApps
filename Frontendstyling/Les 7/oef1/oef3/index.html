@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form name="formulier" action="">
+        <fieldset>
+        <legend>
+            Persoonlijke Gegevens
+        </legend>
+      
+            <label for="name">
+                Voornaam
+            </label>
+            <input type="text" name="name">
+            <br> <br>
+            <label for="lastname">
+                Achternaam
+            </label>
+            <input type="text" name="lastname">
+            <br> <br>
+            <label for="man">Man</label>
+            <input type="radio" name="geslacht" id="Man">
+            <label for="vrouw">Vrouw</label>
+            <input type="radio" name="geslacht" id="Vrouw">
+            <br> <br>
+            <label>Provincie</label>
+            <select name="provincie">
+       
+                <option>Antwerpen</option>
+                <option>Vlaams-Brabant</option>
+                <option>Limburg</option>
+                <option>Oost-Vlaanderen</option>
+                <option>West-Vlaanderen </option>
+            </select>
+        </fieldset>
+  
+
+        <fieldset>
+            <legend>
+                Opleidingsmodules
+            </legend>
+            <input type="checkbox" name="HTML" id="HMTL">
+<label for="HTML">HTML/CSS</label>
+<input type="checkbox" name="java" id="java">
+<label for="Java">Javascript</label>
+<input type="checkbox" name="ang" id="ang">
+<label for="ang">Angular</label>
+<input type="checkbox" name="io" id="io">
+<label for="io">Ionic</label>
+
+        </fieldset>
+        <br> <br>
+        <div>
+<input type="submit" name="verzend" value="Formulier verzenden">
+</div>
+    </form>
+
+
+</body>
+
+</html>

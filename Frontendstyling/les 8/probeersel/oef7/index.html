@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p {
+        color: brown;
+        font-size: 2em;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: url("france.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    fieldset {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border: 0px;
+
+    }
+
+    legend {
+        color: rgba(0, 0, 20, 0.6);
+        font-size: 0.8em;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    div input {
+        margin-left: 20px;
+        background-color: brown;
+    }
+</style>
+
+<body>
+    <form name="formulier" action="">
+        <fieldset>
+            <p>Boek nu</p>
+            <fieldset>
+                <legend>
+                    Check in
+                </legend>
+                <input type="date" name="date">
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Check Out
+                </legend>
+                <input type="date" name="date">
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Volwassenen
+                </legend>
+                <select name="volw">
+
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Kinderen
+                </legend>
+                <select name="volw">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+
+                </select>
+                <div>
+                    <input type="submit" name="verzend" value="Zoeken">
+                </div>
+            </fieldset>
+        </fieldset>
+</body>
+
+</html>

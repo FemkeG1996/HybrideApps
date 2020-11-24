@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta name="robots" content="all">
+    <meta name="language" content="Dutch">
+    <meta name="author" content="Joy Van Vlierberghe">
+    <meta name="copyright" content="copyright">
+    <link rel="stylesheet" href="css/labs.css">
+    <title>Vaardigheid-lab 09</title>
+</head>
+
+<body>
+
+    <form name="formulier" action="mailto: info@inceptual.be" method="post">
+
+        <fieldset>
+
+            <legend>
+                <h1>Inschrijvingsformulier</h1>
+            </legend>
+
+            <input list="cursus" name="opties" id="opties" placeholder="Kies een cursus">
+
+            <datalist id="cursus">
+
+                <option value="HTML/CSS">
+
+                <option value="Javascript">
+
+                <option value="Angular">
+
+                <option value="Ionic">
+
+                <option value="Databanken">
+
+            </datalist>
+
+            <br>
+            <br>
+
+            <input list="locatie" name="steden" id="steden" placeholder="Kies een locatie">
+
+            <datalist id="locatie">
+
+                <option value="Antwerpen">
+
+                <option value="Hasselt">
+
+                <option value="Gent">
+
+                <option value="Brugge">
+
+                <option value="Brussel">
+
+            </datalist>
+
+            <br>
+            <br>
+
+            <label for="datum">
+                Begindatum:
+            </label>
+
+            <br>
+
+            <input type="date" name="datum" id="datum">
+
+            <br>
+            <br>
+
+            <label for="opleiding">
+                Selecteer een opleiding:
+            </label>
+
+            <label for="bol">
+                BOL
+            </label>
+
+            <input type="radio" name="opleiding" value="BOL" id="bol">
+
+            <label for="bbl">
+                BBL
+            </label>
+
+            <input type="radio" name="opleiding" value="BBL" id="bbl">
+
+            <br>
+            <br>
+
+            <input type="text" name="voornaam" id="voornaam" placeholder="Voornaam">
+
+            <br>
+            <br>
+
+            <input type="text" name="achternaam" id="achternaam" placeholder="Achternaam">
+
+            <br>
+            <br>
+
+            <input type="text" name="adres" id="adres" placeholder="Adres">
+
+            <br>
+            <br>
+
+            <input type="text" name="woonplaats" id="woonplaats" placeholder="Woonplaats">
+
+            <br>
+            <br>
+
+            <input type="text" name="email" id="email" placeholder="E-mail">
+
+            <br>
+            <br>
+
+            <input type="text" name="mobiel" id="mobiel" placeholder="Mobiel">
+
+            <br>
+            <br>
+
+            <label for="voorkeur">
+                Geef je voorkeur aan:
+            </label>
+
+            <br>
+
+            <label for="avondschool">
+                Avondschool:
+            </label>
+
+            <input type="checkbox" name="avondschool" id="avondschool">
+
+            <br>
+
+            <label for="weekendschool">
+                Weekendschool:
+            </label>
+
+            <input type="checkbox" name="weekendschool" id="weekendschool">
+
+            <br>
+
+            <label for="geenvoorkeur">
+                Geen voorkeur:
+            </label>
+
+            <input type="checkbox" name="geenvoorkeur" id="geenvoorkeur">
+
+            <br>
+            <br>
+
+            <label for="niveau">
+                Wat is je opleidingsniveau:
+            </label>
+
+            <br>
+
+            <div class="slidecontainer">
+                <input type="range" min="0" max="100" value="50" class="slider" id="myRange">
+              </div>
+
+        </fieldset>
+
+        <br>
+
+        <div>
+
+            <input type="submit" name="verzend" value="Verzend">
+       
+        </div>
+
+    </form>
+
+</body>
+
+</html>
