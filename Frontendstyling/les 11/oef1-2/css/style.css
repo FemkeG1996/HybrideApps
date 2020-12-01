@@ -1,0 +1,24 @@
+body {
+  font-size: 18px;
+  font-family: helvetica;
+}
+
+h1 {
+  font-size: 72px;
+  font-family: courier;
+  color: blue;
+}
+
+h2 {
+  font-size: 54px;
+  font-family: courier;
+  color: blue;
+}
+
+h3 {
+  font-size: 36px;
+  font-family: courier;
+  color: blue;
+}
+
+/*# sourceMappingURL=style.css.map */

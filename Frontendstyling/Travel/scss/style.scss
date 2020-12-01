@@ -1,0 +1,72 @@
+body {
+    background-image: url(../afb/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 94.2vh;
+    width: 100vw;
+}
+
+.mid {
+    margin-top: 15%;
+    color: rgba(0, 0, 0, 0.733);
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(161, 57, 39, 1);
+
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    opacity: 0.85;
+}
+
+.navbar-custom {
+    background-color: rgba(161, 57, 39, 1);
+}
+
+.nav-link {
+    color: lightgray;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: rgba(0, 0, 0, 0.76);
+    border-bottom: 2px solid black;
+    margin-bottom: -1px;
+}
+
+.card {
+    background-color: rgba(184, 167, 167, 0.4);
+
+}
+
+.dropdown-item {
+
+    color: white;
+}
+
+.dropdown-menu {
+    margin-top: 10px;
+    background-color: rgba(161, 57, 39,1);
+}
+
+.warning {
+    background-color: rgba(199, 89, 5, 1);
+    
+}
+
+.btn {
+    color: lightgrey;
+}
+i{
+    margin-top: -5px;
+    margin-left: -5px;
+}

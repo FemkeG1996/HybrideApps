@@ -1,0 +1,32 @@
+@use 'font';
+
+nav{
+    font-family: font.$navfont;
+    background-color: rgb(32,178,223);
+    ul{
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        margin: 0;
+        li{
+            list-style-type: none;
+            padding: 15px;
+            a{
+                color: white;
+                text-decoration: none;
+                &:hover{
+                font-style: italic; 
+                font-weight: bold;
+                }
+             }
+        }
+    }
+}
+main{
+    background-color: rgb(170, 216, 230);
+    font-family: font.$mainfont;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}

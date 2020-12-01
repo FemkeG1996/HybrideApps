@@ -1,0 +1,75 @@
+$width:100px;
+$height:100px;
+%vierkant{
+    width: $width;
+    height: $height;
+    background-color: white;
+ margin: 10px;
+}
+
+.vierkant1{
+    @extend %vierkant;
+    text-align: center;
+    filter: drop-shadow(-8px 8px 10px black);
+    color: #e34c26;
+    
+    &:hover{
+        background-color: #e34c26;
+        color: white;
+        margin-left: 50px;
+        margin-bottom: 50px;
+    }
+}
+.vierkant2{
+    @extend %vierkant;
+    text-align: center;
+    filter: drop-shadow(-8px 8px 10px black);
+    color: #264de4;
+    &:hover{
+        background-color: #264de4;
+        color: white;
+        margin-left: 50px;
+        margin-bottom: 50px;
+    }
+}
+.vierkant3{
+    @extend %vierkant;
+    text-align: center;
+    filter: drop-shadow(-8px 8px 10px black);
+    color:  #cd6799;;
+    &:hover{
+        background-color: #cd6799;
+        color: white;
+        margin-left: 50px;
+        margin-bottom: 50px;
+    }  
+}
+.vierkant4{
+    @extend %vierkant;
+    text-align: center;
+    filter: drop-shadow(-8px 8px 10px black);
+    color: #563d7c;;
+    &:hover{
+        background-color: #563d7c;
+        color: white;
+        margin-left: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+body{
+    background-color: lightgrey;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:800px){
+    body{
+        background-color: lightgrey;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+}

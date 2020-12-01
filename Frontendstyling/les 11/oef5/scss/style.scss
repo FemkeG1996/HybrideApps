@@ -1,0 +1,25 @@
+$kleur: green;
+
+@mixin mybox ($grootte) {
+
+width: $grootte;
+height: $grootte;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+.box1 {
+    @include mybox(100px);
+    background-color: $kleur;
+    }
+
+.box2{
+    @include mybox(200px);
+    background-color: $kleur;
+}
+.box3{
+    @include mybox(300px);
+    background-color: $kleur;
+}

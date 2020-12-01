@@ -1,0 +1,73 @@
+.vierkant4, .vierkant3, .vierkant2, .vierkant1 {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  margin: 10px;
+}
+
+.vierkant1 {
+  text-align: center;
+  filter: drop-shadow(-8px 8px 10px black);
+  color: #e34c26;
+}
+.vierkant1:hover {
+  background-color: #e34c26;
+  color: white;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+.vierkant2 {
+  text-align: center;
+  filter: drop-shadow(-8px 8px 10px black);
+  color: #264de4;
+}
+.vierkant2:hover {
+  background-color: #264de4;
+  color: white;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+.vierkant3 {
+  text-align: center;
+  filter: drop-shadow(-8px 8px 10px black);
+  color: #cd6799;
+}
+.vierkant3:hover {
+  background-color: #cd6799;
+  color: white;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+.vierkant4 {
+  text-align: center;
+  filter: drop-shadow(-8px 8px 10px black);
+  color: #563d7c;
+}
+.vierkant4:hover {
+  background-color: #563d7c;
+  color: white;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+body {
+  background-color: lightgrey;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  body {
+    background-color: lightgrey;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

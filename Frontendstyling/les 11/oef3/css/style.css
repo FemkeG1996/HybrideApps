@@ -1,0 +1,25 @@
+nav {
+  font-family: verdana;
+  background-color: #20b2df;
+  padding: 15px;
+}
+nav:hover {
+  font-style: italic;
+  font-weight: bold;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+main {
+  background-color: #aad8e6;
+  font-family: arial;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+/*# sourceMappingURL=style.css.map */

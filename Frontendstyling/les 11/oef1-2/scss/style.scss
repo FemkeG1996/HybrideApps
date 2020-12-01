@@ -1,0 +1,24 @@
+$font: helvetica;
+$fontkop : courier;
+$kleur: blue;
+$default: 18px;
+body {
+    font-size: $default;
+    font-family: $font;
+    }
+    h1 {
+    font-size: $default*4;
+    font-family: $fontkop;
+    color: $kleur;
+    }
+    h2 {
+    font-size: $default*3;
+    font-family: $fontkop;
+    color: $kleur;
+    }
+    h3 {
+    font-size: $default*2;
+    font-family: $fontkop;
+    color: $kleur;
+    }
+    

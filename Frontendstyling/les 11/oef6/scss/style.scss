@@ -1,0 +1,24 @@
+%cirkel{
+
+    border-radius: 50%;
+}
+body{
+    display: grid;
+    grid-template-columns: repeat(2,200px);
+}
+.circle1{
+    @extend %cirkel;
+    background-color: red;
+}
+.circle2{
+    @extend %cirkel;
+    background-color: purple;
+}
+.circle3{
+    @extend %cirkel;
+    background-color: green;
+}
+.circle4{
+    @extend %cirkel;
+    background-color: brown;
+}
