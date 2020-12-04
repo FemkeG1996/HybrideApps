@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../wicked.css">
+    <title>Document</title>
+</head>
+
+<body class="bodyI">
+
+    <nav class="navbar navbar-custom sticky-top navbar-expand-lg">
+        <button class="navbar-toggler text-light border p-2" type="button" data-toggle="collapse"
+            data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-fan fa-2x barrelRoll"></i></span>
+        </button>
+        <a class="navbar-brand btn border" href="../index.html">Book2Japan</a>
+
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <nav class="nav d-flex flex-column flex-md-row w-100 justify-contentend">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../documentation and transport/book.html">Booking</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Activities
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="../activities/summer.html">Summer</a>
+                            <a class="dropdown-item" href="../activities/autumn.html">Autumn</a>
+                            <a class="dropdown-item" href="../activities/winter.html">Winter</a>
+                            <a class="dropdown-item" href="../activities/spring.html">Spring</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Transport
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="../documentation and transport/Shinkansen.html">Shinkansen</a>
+                            <a class="dropdown-item" href="../documentation and transport/train.html">Trains</a>
+                            <a class="dropdown-item" href="../documentation and transport/bus.html">Bus</a>
+
+                        </div>
+                    </li>
+                </ul>
+
+                <a class="" href="../documentation and transport/contact.html" style="color: white;"> Contact Us</a>
+
+            </nav>
+        </div>
+    </nav>
+
+<div class="row">
+    <div class="col-lg-6 col-12">
+
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+            <small id="emailHelp" class="form-text ">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="row">
+            <div class="col">
+                Airport Departure
+                <select class="form-control" aria-placeholder="Airport Departure">
+                  <option>Brussels Airport</option>
+                    <option>Zaventem Airport</option>
+                    <option>Antwerp Airport</option>
+                </select>
+            </div>
+            <div class="col">
+                Airport Arrival
+                <select class="form-control" aria-placeholder="Airport Arrival">
+                    <option>Narita Airport</option>
+                    <option>Haneda Airport</option>
+                    <option>Osaka International Airport</option>
+                    <option>ANA Lppunge</option>
+                    <option>Chofu Airport</option>
+                    <option>Mt. Fuji Shizuoka Airport</option>
+                    <option>Hiroshima Airport</option>
+                    <option>New-Chitose Airport</option>
+                    <option>Kyushu Saga Airport</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                Adults
+                <select class="form-control" aria-placeholder="Adult">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                </select>
+            </div>
+            <div class="col">
+                Children
+                <select class="form-control" aria-placeholder="Adult">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                Departure Date <br>
+                <input type="date" name="date">
+            </div>
+            <div class="col">
+                Return Date <br>
+                <input type="date" name="date">
+            </div>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Window Seat</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Order Flight Ticket</button>
+
+    </form>
+</div>
+    <div class="col-lg-6 col-12">
+    <form>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+            <small id="emailHelp" class="form-text ">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="row">
+            <div class="col">
+                Hotel Booking
+                <select class="form-control" aria-placeholder="Airport Departure">
+                    <option>Hotel Naha Shuri Castle</option>
+                    <option>Hotel Moon Beach</option>
+                    <option>APA Hotel & Resort Tokyo</option>
+                    <option>Hotel Moon Beach</option>
+                    <option>Shinjuku Granbell Hotel</option>
+                    <option>Tokyo Disneyland Hotel</option>
+                    <option>Onyado Nono</option>
+                    <option>Southern Beach Hotel & Resort</option>
+                    <option>Ryuku Onsen Senagajima</option>
+
+                </select>
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col">
+                Adults
+                <select class="form-control" aria-placeholder="Adult">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                </select>
+            </div>
+            <div class="col">
+                Children
+                <select class="form-control" aria-placeholder="Adult">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="">
+                Check in Date <br>
+                <input type="date" name="date">
+            </div>
+            <div class="col-6">
+                Check Out Date <br>
+                <input type="date" name="date">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-4">Order Hotel Room</button>
+
+    </form>
+</div>
+</div>
+</body>
+
+</html>

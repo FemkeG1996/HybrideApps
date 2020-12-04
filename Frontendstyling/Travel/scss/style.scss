@@ -1,9 +1,10 @@
-body {
+.bodyI {
     background-image: url(../afb/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 94.2vh;
+    height: 100vh;
     width: 100vw;
+ 
 }
 
 .mid {
@@ -11,15 +12,15 @@ body {
     color: rgba(0, 0, 0, 0.733);
 }
 
-footer {
-    position: absolute;
+footer{
+    position: sticky;
     width: 100%;
     bottom: 0;
     background-color: rgba(161, 57, 39, 1);
 
 }
 
-img {
+.card-img-top {
     width: 200px;
     height: 200px;
     opacity: 0.85;
@@ -60,6 +61,7 @@ img {
 
 .warning {
     background-color: rgba(199, 89, 5, 1);
+    width: 260px;
     
 }
 
@@ -69,4 +71,89 @@ img {
 i{
     margin-top: -5px;
     margin-left: -5px;
+}
+img{
+    width: 500px;
+    height: 500px;
+}
+
+.bodyA{
+ background-color: rgba(213, 237, 253, 0.8); 
+}
+
+.carousel{
+    padding-top: 20px;
+    width: 80%;
+    margin-left: 10%;
+}
+@media only screen and (max-width: 1200px)
+{
+  .cards{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+}
+.cards{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.card{
+    padding-left: 40px;
+    background-color:rgb(236, 247, 255) ;
+  }
+.card img{
+    width: 200px;
+    height: 200px;
+}
+.Autumn{
+    background-color: rgba(155, 45, 11, 0.8); 
+}
+.c-autumn{
+    background-color: rgba(247, 141, 109, 0.7); 
+}
+.winter{
+    background-color: rgba(161, 209, 241, 0.8); 
+}
+.c-winter{
+ background-color:rgb(203, 225, 240) ;
+}
+.spring{
+    background-color: #ffb1fcb4; 
+
+}
+.c-spring{
+    background-color: #fcdafbd2; 
+}
+fieldset {
+   text-align: center;
+padding: 20px;
+}
+
+label {
+ font-size: 20px;
+}
+form{
+    margin-top: 20%;
+    border: 3px solid rgba(161, 57, 39, 1);
+    padding: 20px;
+    background-color: rgba(161, 57, 39, 0.9);
+    color: white;
+}
+
+@media only screen and (min-width: 1200px)
+{
+    .bodyI{
+        position:fixed;
+        bottom: 0;
+    }
+}
+@media only screen and (min-width: 1200px)
+{
+    .trains{
+
+        display: flex;
+    }
+
 }

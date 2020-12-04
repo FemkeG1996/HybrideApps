@@ -1,1 +1,163 @@
-body{background-image:url(../afb/background.jpg);-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;background-repeat:no-repeat;height:94.2vh;width:100vw}.mid{margin-top:15%;color:rgba(0,0,0,.733)}footer{position:absolute;width:100%;bottom:0;background-color:#a13927}img{width:200px;height:200px;opacity:.85}.navbar-custom{background-color:#a13927}.nav-link{color:#d3d3d3;padding-left:30px;padding-right:30px;font-size:15px;font-weight:700}.nav-link:hover{color:rgba(0,0,0,.76);border-bottom:2px solid #000;margin-bottom:-1px}.card{background-color:rgba(184,167,167,.4)}.dropdown-item{color:#fff}.dropdown-menu{margin-top:10px;background-color:#a13927}.warning{background-color:#c75905}.btn{color:#d3d3d3}i{margin-top:-5px;margin-left:-5px}
+.bodyI {
+  background-image: url(../afb/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+
+.mid {
+  margin-top: 15%;
+  color: rgba(0, 0, 0, 0.733);
+}
+
+footer {
+  position: sticky;
+  width: 100%;
+  bottom: 0;
+  background-color: #a13927;
+}
+
+.card-img-top {
+  width: 200px;
+  height: 200px;
+  opacity: 0.85;
+}
+
+.navbar-custom {
+  background-color: #a13927;
+}
+
+.nav-link {
+  color: lightgray;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: rgba(0, 0, 0, 0.76);
+  border-bottom: 2px solid black;
+  margin-bottom: -1px;
+}
+
+.card {
+  background-color: rgba(184, 167, 167, 0.4);
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.dropdown-menu {
+  margin-top: 10px;
+  background-color: #a13927;
+}
+
+.warning {
+  background-color: #c75905;
+  width: 260px;
+}
+
+.btn {
+  color: lightgrey;
+}
+
+i {
+  margin-top: -5px;
+  margin-left: -5px;
+}
+
+img {
+  width: 500px;
+  height: 500px;
+}
+
+.bodyA {
+  background-color: rgba(213, 237, 253, 0.8);
+}
+
+.carousel {
+  padding-top: 20px;
+  width: 80%;
+  margin-left: 10%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.cards {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  padding-left: 40px;
+  background-color: #ecf7ff;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+}
+
+.Autumn {
+  background-color: rgba(155, 45, 11, 0.8);
+}
+
+.c-autumn {
+  background-color: rgba(247, 141, 109, 0.7);
+}
+
+.winter {
+  background-color: rgba(161, 209, 241, 0.8);
+}
+
+.c-winter {
+  background-color: #cbe1f0;
+}
+
+.spring {
+  background-color: #ffb1fcb4;
+}
+
+.c-spring {
+  background-color: #fcdafbd2;
+}
+
+fieldset {
+  text-align: center;
+  padding: 20px;
+}
+
+label {
+  font-size: 20px;
+}
+
+form {
+  margin-top: 20%;
+  border: 3px solid #a13927;
+  padding: 20px;
+  background-color: rgba(161, 57, 39, 0.9);
+  color: white;
+}
+
+@media only screen and (min-width: 1200px) {
+  .bodyI {
+    position: fixed;
+    bottom: 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .trains {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
