@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var palet = ['wit', 'blauw', 'groen', 'rood', 'zwart'];
+        document.write(palet + '<br>');
+        var nieuwekleur = prompt('Typ een nieuwe kleur: ');
+        palet.push(nieuwekleur);
+        document.write(palet + '<br>');
+        var nieuwekleur2 = prompt('Typ een nieuwe kleur: ');
+        palet.unshift(nieuwekleur2);
+        document.write(palet + '<br>');
+        palet.sort();
+        document.write(palet + '<br>');
+        var palet2 = palet.splice(0, (palet.length / 2)+1);
+        document.write(palet + '<br>');
+        document.write(palet2 + '<br>');
+        var palet3 = palet;
+        document.write(palet3 + '<br>');
+
+    </script>
+</body>
+</html>

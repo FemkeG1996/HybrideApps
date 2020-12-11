@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   var testarray = new Array();
+   testarray[0] = "een";
+   testarray[1] = 'twee';
+   testarray[2] = '3';
+   testarray[3] = 'vier';
+   testarray[4] = '5';
+   
+   for (var i = 0 ; i < testarray.length; i++){
+    document.write(testarray[i]+ '<br>' )
+   }
+   testarray.pop();
+   for (var i = 0 ; i < testarray.length; i++){
+    document.write(testarray[i]+ '<br>' )
+   }
+   testarray.unshift('<br> nul')
+   for (var i = 0 ; i < testarray.length; i++){
+    document.write(testarray[i]+ '<br>' )
+   }
+//   testarray.[0]; --> SPLICE gebruiken
+  
+//    for (var i = 0 ; i < testarray.length; i++){
+//     document.write(testarray[i]+ '<br>' )
+//    }
+
+testarray.shift();
+for (var i = 0 ; i < testarray.length; i++){
+    document.write(testarray[i]+ '<br>' )
+   }
+
+//    index 2 verwijderen
+    </script>
+</body>
+</html>

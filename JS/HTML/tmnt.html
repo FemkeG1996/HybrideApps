@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ninjaTurtles = ["Leonardo", "Michelangelo","Raphael", "Donatello"];
+        var bio = ["https://nl.wikipedia.org/wiki/Leonardo_(Teenage_Mutant_Ninja_Turtles)", "https://nl.wikipedia.org/wiki/Michelangelo_(Teenage_Mutant_Ninja_Turtles)", "https://nl.wikipedia.org/wiki/Raphael_(Teenage_Mutant_Ninja_Turtles)", "https://nl.wikipedia.org/wiki/Donatello_(Teenage_Mutant_Ninja_Turtles)"  ]
+        for (i=0; i< ninjaTurtles.length; i++){
+            document.write("<a href=" + bio[i] + " target=_blank>" + ninjaTurtles[i] + "</a><br>")
+        }
+        var michelangelo = ninjaTurtles.slice(1,2)
+        console.log(michelangelo);
+        for (i=0; i < ninjaTurtles.length; i++){
+            document.write("<h1 id='turtle"+ i +"'>" + ninjaTurtles[i] + "</h1>")
+        }
+    </script>
+</body>
+</html>
