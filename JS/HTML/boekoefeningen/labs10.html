@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form name="form">
+        <input type="text" name="bedrag" placeholder="Vul bedrag in">
+        <select name="select">
+            <option name="optie1">Dollar/Euro</option>
+            <option name="optie2">Euro/Dollar</option>
+            <option name="optie3">Euro/Ruble</option>
+            <option name="optie4">Ruble/Euro</option>
+        </select>
+        <input type="button" value="converteren" onclick="document.write('conversie ' + exchange(document.form.bedrag.value, document.form.select.value))">
+    </form>
+    <script>
+function exchange(bedrag, conversie) {
+ 
+    if(conversie == "Dollar/Euro"){
+        bedrag = bedrag * 1.36;
+    } else if(conversie == "Euro/Dollar"){
+        bedrag = bedrag * 0.74;
+    } else if(conversie == "Euro/Ruble"){
+        bedrag = bedrag * 48.44;
+    } else if(conversie == "Ruble/Euro"){
+        bedrag = bedrag * 0.02;
+    }
+    return bedrag;
+}
+</script>
+
+</body>
+</html>

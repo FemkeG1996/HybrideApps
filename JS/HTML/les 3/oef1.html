@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        body{
+            background-image: url(../img/nordwood-themes-KcsKWw77Ovw-unsplash.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        #picture{
+            height: 400px;
+            width: 400px;
+            background-image: url(../img/pic1.jpg);
+            background-position: center ;
+            background-size: cover;
+            margin: auto;
+            transition: 0.5s;
+        }
+        i{
+            font-size: 50px;
+        }
+        #buttons{
+            margin-top: 20px;
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+
+    <div id="pictures"></div>
+    <div id="buttons">
+        <i class="fas fa-arrow-circle-left" onclick="prev()"></i>
+        <i class="fas fa-arrow-circle-right" onclick="next()"></i>
+        <i class="fas fa-search-plus" onclick="zoom(50)"></i>
+        <i class="fas fa-search-minus" onclick="zoom(-50)"></i>
+    </div>
+
+    <script>
+        var arrImages = [
+            '../img/pic1.jpg',
+            '../img/pic2.jpg',
+            '../img/pic3.jpg'
+
+        ];
+        var imageIndex = 0;
+        var picwidth = 400;
+        var picheight = 400;
+
+        function zoom(pixels){
+            picwidth += pixels;
+            picheight += pixels;
+            document.getElementById("picture").style.width = picwidth + 'px'
+            document.getElementById("picture").style.height = picheight + 'px'
+        }
+
+        function prev() {
+            if (imageIndex > 0) {
+                imageIndex --;
+                document.getElementById('picture').style.backgroundImage = 'url('+ arrImages[imageIndex]+ ')';
+            }
+        }
+        function next() {
+            if (imageIndex > 2) {
+                imageIndex ++;
+                document.getElementById('picture').style.backgroundImage = 'url('+ arrImages[imageIndex]+ ')';
+            }
+        }
+
+    </script>
+</body>
+
+</html>

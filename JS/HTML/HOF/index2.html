@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+
+
+var fruits = [{
+    name: "Apple",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/265px-Red_Apple.jpg",ranking: 3
+    }, {
+    name: "Banana",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Bananas_white_background_DS.jpg/320px-Bananas_white_background_DS.jpg",
+    ranking: 1
+    }, {
+    name: "Pineapple",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Pineapple_and_cross_section.jpg/286px-Pineapple_and_cross_section.jpg",
+    ranking: 2
+    }];
+
+
+var fruitarray = fruits.map(
+    function(elem)
+    {
+        return{
+            naam: elem.name,
+            afbeelding: elem.image
+        }
+    }
+)
+
+fruitarray.forEach(
+    function(fruit){
+        document.write(`${fruit.naam}: <img src="${fruit.afbeelding}"><br>`);
+    }
+)
+
+
+
+
+   </script>
+</body>
+</html>

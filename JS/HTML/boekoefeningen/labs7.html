@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Lab 07</h2>
+    <h3> Factuur</h3>
+    <script>
+        var klantnaam = prompt('voer je eigen naam in');
+        var aantal = parseInt(prompt('aantal boeken te bestellen?'));
+        var titel = 'Javascript';
+        var prijs = 29.90;
+        var btw = 6/100;
+        var totaal= prijs*aantal;
+        var woonplaats = prompt ('woonplaats')
+        var postcode = prompt ('Postcode')
+        var bezorgkosten = 15;
+    
+        if (woonplaats == 'Amsterdam' && postcode >=1000 && postcode <=2000 ){
+            
+            document.write('Geen Bezorgkosten')
+        }
+        else(document.write('bezorgkosten zijn ' + bezorgkosten))
+
+
+        var factuurdatum = new Date();
+        var ms = new Date().getTime() + (86400000*5);
+        var betaalfactuur = new Date(ms)
+        
+
+
+        document.write('<br> Bedankt voor je bestelling:' + klantnaam);
+        document.write('<br> Boektitel is:' + titel);
+        document.write('<br> Aantal te bestellen:' + aantal);
+        document.write('<br> Prijs per boek is:' +prijs.toFixed(2))
+        document.write('<br> Totaalprijs is:' + totaal.toFixed(2))
+        document.write('<br> Totaalprijsinclusief BTW is:'+ (totaal + totaal*btw).toFixed(2))
+        document.write('<br> FactuurDatum' +factuurdatum.getDate() + "/" + (factuurdatum.getMonth()+1 )+ "/" + factuurdatum.getFullYear())
+        document.write('<br> Betaalfactuur' +betaalfactuur.getDate() + "/" + (betaalfactuur.getMonth()+1 )+ "/" + betaalfactuur.getFullYear())
+    </script>
+</body>
+</html>

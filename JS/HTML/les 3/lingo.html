@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>LINGO</h1>
+    <form name= 'frm' onsubmit='return false;'>
+    <input type="text" name="gok" placeholder="Type jouw woord" onkeyup="speel();">
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+        var randomWoord = 'boom';
+
+        function speel(){
+        var gok = document.frm.gok.value;
+        if(gok.length == randomWoord.length)
+        {
+            console.log(gok);
+        }
+    }
+    </script>
+</body>
+</html>

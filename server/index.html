@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        SQL TOOL
+    </h1>
+
+    <form name='frm'>
+        <textarea name="query" cols="100" rows="20"></textarea>
+        <input type="button" onclick="processSql()" value="verzenden">
+    </form>
+
+
+
+    <div id="output"></div>
+
+
+    <script>
+        function processSql() {
+            document.getElementById("output").innerHTML = '';
+const Http = new XMLHttpRequest();
+const url = 'http://localhost:3100/query';
+Http.open("POST", url);
+Http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded; charset=UTF-8');
+Http.send("sql=" + document.frm.query.value);
+Http.onreadystatechange = (e) => {
+    if (Http.readyState == 4 && Http.status == 200) {
+        var jsonstr = Http.responseText;
+        var arr = JSON.parse(jsonstr);
+        console.log(jsonstr);
+        console.log(arr);
+
+        arr.forEach(
+            function(rij) {
+                for(kolom in rij){
+                    document.getElementById("output").innerHTML += rij[kolom] + ' ';
+                }
+                document.getElementById("output").innerHTML += rij[kolom] + '<br>';
+            
+        });
+    }
+}
+}
+    </script>
+</body>
+</html>

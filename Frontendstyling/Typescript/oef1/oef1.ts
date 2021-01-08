@@ -1,0 +1,4 @@
+for (let i = 5 ; i < 51 ; i +=5)
+{
+console.log(i);
+}

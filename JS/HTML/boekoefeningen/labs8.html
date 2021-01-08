@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var dag = 86400000;
+        var fdag = new Date().getTime() + (86400000*12);
+        var bdag = new Date().getTime() + (86400000*30);
+        var vandaag = new Date();
+        var factuur = new Date(fdag);
+        var termijn = new Date(bdag);
+        var resterende = ((bdag - vandaag)/ dag) ;
+
+     
+         var betaaltijd = (factuur.getTime() + termijn.getTime());
+         var betaaldatum = new Date(betaaltijd);
+
+
+        document.write(vandaag + '<br>');
+        document.write(factuur + '<br>');
+        document.write(betaaldatum + '<br>');
+        
+        if (resterende < 0 ){
+            document.write('Meld IncassoBureau')
+        }
+        else(document.write(resterende + ' dagen over'))
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+body{
+    font-size: 20px;
+    background-image: url(../image/mulan.jpg);
+}
+
+h1{
+    padding-left: 30%;
+    color: white;
+}
+.mirror{
+    transform: matrix(-1, 0, 0, 1, 0, 0);;
+    opacity: 0.7;
+}
+#uitkomst{
+    color: white;
+}
+#uitkomst2{
+    color: white;
+}

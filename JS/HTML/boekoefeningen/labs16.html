@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .blok{
+            box-sizing: border-box;
+            height: 50px;
+            width: 50px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+        .blokheading{
+            width: 50px;
+            display: inline-block;
+            text-align: center;
+        }
+    </style>
+
+    <form name="frm">
+    <select name="maand">Selecteer maand:
+        <option value="0">Januari</option>
+        <option value="1">Februari</option>
+        <option value="2">Maart</option>
+        <option value="3">April</option>
+        <option value="4">Mei</option>
+        <option value="5">Juni</option>
+        <option value="6">Juli</option>
+        <option value="7">Augustus</option>
+        <option value="8">September</option>
+        <option value="9">Oktober</option>
+        <option value="10">November</option>
+        <option value="11">December</option>
+    </select>
+    <select name="jaar">Selecteer maand:
+        <option value="2010">2010</option>
+        <option value="2011">2011</option>
+        <option value="2012">2012</option>
+        <option value="2013">2013</option>
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+
+    </select>
+    <input type="button" value="Print" onclick="toonKalender()">
+    </form>
+
+
+    <div id="output">
+HIER KOMT DE KALENDER
+    </div>
+
+
+<script>
+    function toonKalender(){
+        var maand = Number(document.frm.maand.value);
+        var jaar = Number(document.frm.jaar.value);
+        var kalender ='';
+
+        var datum = new Date (jaar,maand+1,0);
+        var aantaldagen = datum.getDate();
+        var startdatum = new Date (jaar,maand,1);
+        var startweekdag = startdatum.getDay();
+
+        var arr = ['zo','ma','di','wo','do','vr','za'];
+        for (var i = 0; i < 7; i++)
+        {
+            kalender += '<div class="blokheading">'+ arr[i] +'</div>';
+        }
+        kalender += '<br>';
+
+        var dag = 1;
+        var j = 1;
+        while (dag <= aantaldagen){
+            for (var i = 0 ; i < 7; i++)
+            {
+                if ((i < startweekdag && j == 1 || dag > aantaldagen)){
+                    kalender += '<div class="blok"> &nbsp; </div>';
+                }
+                else{
+                    kalender += '<div class="blok">'+ dag +'</div>';
+                    dag++;
+                }
+            }
+            kalender += '<br>';
+            j++
+        }
+        document.getElementById('output').innerHTML = kalender;
+
+    }
+
+</script>
+
+</body>
+</html>

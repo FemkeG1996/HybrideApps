@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container"></div>
+    <button onclick="showImages()" value="Toon"> Toon</button>
+
+
+    <script>
+        var getekend = false;
+        var showImages = () => {
+            if (!getekend) {
+                for (var i = 1; i <= 8; i++) {
+                    document.getElementById("container").innerHTML += "<img width='50' height='50' src='afb/JumpAttack (" + i + ").png' alt='foto'>"
+                }
+                getekend = true;
+            }
+        }
+    </script>
+</body>
+
+
+</html>

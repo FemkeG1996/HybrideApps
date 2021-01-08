@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var scoreDat = Number(prompt("Wat is uw score voor databanken?"));
+        var scorePro = Number(prompt("Wat is uw score voor programmeren?"));
+        var scoreDes = Number(prompt("Wat is uw score voor design?"));
+        if ((scoreDat > 20 || scorePro > 20|| scoreDes) > 20 ){
+            alert("Score moet 20 of kleiner zijn.")
+        }
+        var totaal = scoreDat + scorePro + scoreDes;
+        var op100 = (totaal/60)*100;
+        op100 = op100.toFixed(0);
+        if (op100 >= 50){
+            document.write("Score: " + op100 + "/100. Proficiat, u bent geslaagd!")
+        } else {
+            document.write("Score: " + op100 + "/100. Helaas, u bent niet geslaagd")
+        }
+    </script>
+</body>
+</html>

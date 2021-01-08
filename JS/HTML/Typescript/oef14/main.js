@@ -1,0 +1,18 @@
+"use strict";
+exports.__esModule = true;
+var game_1 = require("./game");
+var g = new game_1.game();
+g.setTitel('Het huis');
+g.setUitgever('Noorderkempen');
+g.setPrijs(20);
+var d = new game_1.Deluxe();
+d.setTitel('Noorderzon');
+d.setUitgever('Niemandsland');
+d.setPrijs(20);
+console.log(g.getTitel());
+console.log(g.getUitgever());
+console.log(g.getPrijs());
+console.log(g.getVerkoopprijs());
+console.log(d.getTitel());
+console.log(d.getUitgever());
+console.log(d.getVerkoopprijs());

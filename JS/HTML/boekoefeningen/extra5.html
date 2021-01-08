@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #marvel {
+            height: 250px;
+            width: 150px;
+            position: relative;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        #bg {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            margin: 0px;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            right: 0;
+        }
+
+        .buttons {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-top: 60%;
+        }
+    </style>
+    <img id="bg" src="img/bg.jpg" alt="">
+    <img id="marvel" src="img/captain-marvel.png" alt="">
+
+    <div class="buttons">
+        <button type="button" name="up" onclick="document.getElementById('marvel').style.left =bewegen('Up')" class="btn">Up</button>
+        <button type="button" name="down" onclick="bewegen" class="btn">Down</button>
+        <button type="button" name="left" onclick="bewegen" class="btn">Left</button>
+        <button type="button" name="right" onclick="bewegen" class="btn">right</button>
+    </div>
+
+    <script>
+
+        function bewegen(richting) {
+            var x = document.getElementById("marvel");
+            var px = "px"
+
+            if (richting == "Up") {
+                hoog = hoog - 25;
+                x.style.top = hoog + px;
+                return hoog;
+            } else if (richting == "right") {
+                links = links + 25;
+                x.style.left = links + px;
+                return links;
+            } else if (richting == "left") {
+                links = links - 25;
+                x.style.left = links + px;
+                return links;
+            } else if (richting == "down") {
+                var omlaag = 25;
+                hoog = hoog + 25
+                x.style.top = hoog + px;
+                return hoog;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

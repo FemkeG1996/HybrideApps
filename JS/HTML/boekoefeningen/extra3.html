@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <script>
+        var superheld = prompt("Wat is jouw favoriete superheld?")
+        switch(superheld){
+            case "captain america":
+                document.write("<img src='img/captain-main.png'>");
+                break;
+            case "captain marvel":
+                document.write("<img src='img/captain-marvel.png'>");
+                break;
+            case "ironman":
+                document.write("<img src='img/ironman.png'>");
+                break;
+            case "spiderman":
+                document.write("<img src='img/spiderman.png'>");
+                break;
+            case "thor":
+                document.write("<img src='img/Thor.png'>");
+                break;
+            case "wolverine":
+                document.write("<img src='img/Wolverine_Marvel_XP.png'>");
+                break;
+            default: document.write("Jammer we kennen uw superheld niet")
+        }
+    </script>
+</body>
+</html>
