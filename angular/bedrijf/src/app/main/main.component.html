@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2>Welkom Admin</h2>
+        </div>
+        <div class="col-12">
+            <h3>Dashboard</h3>
+        </div>
+        <div class="col-12 pb-2">{{teller}}</div>
+        <div class="col-12 lijn pt-2">
+            <h3>Medewerkers</h3>
+        </div>
+        <div class="col-12">Medewerkers</div>
+        <div class="col-12 pt-2"><input type="text" id="naam" [value]="naam" [(ngModel)]='naam' (change)='naamwijzig'>
+        </div>
+        <div class="col-12 pt-3">E-mail</div>
+        <div class="col-12 pt-3"><input type="e-mail" id="mail" [value]="mail" [(ngModel)]='mail'></div>
+        <div class="col-12 pt-3">Afbeelding</div>
+        <div class="col-12 pt-3 pb-5"><input type="text" id="afb" [value]="afb"></div>
+        <button (click)='gegevens()'> {{titel}}</button>
+        <button (click)='reset()'>Reset</button>
+        <div *ngIf= 'aan' class="col-12 pt-3" >
+
+        <input type="text" [(ngModel)]='naam'>
+        <input type="text" [(ngModel)]='mail'>
+        <input type="text" [(ngModel)]='afb'>
+        </div>
+    </div>
+
+</div>

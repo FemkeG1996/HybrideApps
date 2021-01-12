@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+var spaarrekening_1 = require("./spaarrekening");
+var zichtrekening_1 = require("./zichtrekening");
+var rekenening1 = new zichtrekening_1.zichtrekening('BE0123456789');
+var rekenening2 = new spaarrekening_1.spaarrekening('BE0123456777');
+rekenening1.storten(1000);
+rekenening2.storten(1000);
+rekenening1.overschrijven(100, rekenening2);
+rekenening1.afhalen(20);
+console.log("Saldo R1: " + rekenening1.getSaldo() + " - Saldo R2: " + rekenening2.getSaldo());
