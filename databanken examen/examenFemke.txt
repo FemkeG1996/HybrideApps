@@ -1,0 +1,287 @@
+drop database sqlair_Femke;
+Create database sqlair_Femke;
+Use sqlair_Femke;
+
+create table maatschappij(
+id int auto_increment primary key,
+naam varchar(255)
+);
+
+create table luchthaven(
+id int auto_increment primary key,
+naam varchar(255),
+IATACode varchar(3)
+);
+
+create table vlucht(
+id int auto_increment primary key,
+nummer varchar(255),
+vertrek date,
+aankomst date,
+vl_id int,
+al_id int,
+
+foreign key (vl_id) REFERENCES luchthaven(id),
+foreign key (al_id) REFERENCES luchthaven(id)
+
+);
+
+create table land(
+id int auto_increment primary key,
+naam varchar(255)
+);
+
+create table passagier (
+id int auto_increment primary key,
+naam varchar(255),
+leeftijd int,
+land_id int,
+geslacht varchar(1),
+
+foreign key (land_id) REFERENCES land(id)
+);
+
+create table vliegtuig(
+id int auto_increment primary key,
+naam varchar(255)
+);
+
+create table pas_vlu (
+id int auto_increment primary key,
+pas_id int,
+vlu_id int,
+
+foreign key (pas_id) REFERENCES passagier(id),
+foreign key (vlu_id) REFERENCES vlucht(id)
+
+);
+
+insert into Land values
+ (1, 'belgië'),
+ (2, 'nederland'),
+ (3, 'uk'),
+ (4, 'usa'),
+ (5, 'spanje'),
+ (6, 'turkije'),
+ (7, 'italië'),
+ (8, 'griekenland'),
+ (9, 'duitsland'),
+ (10, 'oostenrijk');
+  
+ insert into luchthaven (id, naam, IATACode) values 
+ (1, 'Brussels', 'BRU'),
+ (2, 'Eindhoven', 'EIN'),
+ (3, 'London Heathrow', 'LHR'),
+ (4, 'Madrid', 'MAD'),
+ (5, 'Antalya', 'AYT'),
+ (6, 'Helsinki', 'HEL');
+ 
+ insert into Maatschappij values
+(1, 'SN Brussels'),
+(2, 'American Airlines'),
+(3, 'Qantas'),
+(4, 'Ryanair'),
+(5, 'KLM'),
+(6, 'Delta'),
+(7, 'British Airways');
+ 
+ insert into Vliegtuig values
+ (1, 'B-737'),
+ (2, 'B-767'),
+ (3, 'B-747');
+ 
+ insert into Passagier values
+ (1, 'Hermans', 30, 2, 'V'),
+ (2, 'Jones', 45, 4, 'M'),
+ (3, 'Peters', 65, 2, 'V'),
+ (4, 'James', 15, 3, 'M'),
+ (5, 'Dickens', 36, 5, 'V'),
+ (6, 'Eltorro', 26, 5, 'M'),
+ (7, 'Casala', 39, 5, 'V'),
+ (8, 'Frederickx', 26, 1, 'M'),
+ (9, 'De Ridder', 35, 2, 'V'),
+ (10, 'De Ridder', 34, 2, 'M'),
+ (11, 'De Ridder', 29, 2, 'M'),
+ (12, 'Lockhart', 56, 4, 'V'),
+ (13, 'Brown', 75, 4, 'V'),
+ (14, 'Parker', 35, 3, 'V'),
+ (15, 'Eaton', 19, 4, 'M');
+
+ 
+ insert into Vlucht (id, nummer, vertrek, aankomst, vl_id, al_id) values
+ (1, 'SN3719', '2020-01-06 07:35:00', '2020-01-06 10:05:00', 4, 3),
+ (2, 'SN5253', '2020-01-06 08:15:00', '2020-01-06 10:30:00', 2, 4),
+ (3, 'SN5255', '2020-01-06 11:05:00', '2020-01-06 13:20:00', 1, 3),
+ (4, 'SN5257', '2020-01-06 12:35:00', '2020-01-06 14:50:00', 1, 4),
+ (5, 'SN3727', '2020-01-06 14:40:00', '2020-01-06 17:10:00', 1, 4),
+ (6, 'SN5261', '2020-01-07 16:05:00', '2020-01-07 18:20:00', 4, 1),
+ (7, 'SN3719', '2020-01-08 07:35:00', '2020-01-08 10:05:00', 2, 4),
+ (8, 'SN5253', '2020-01-08 08:15:00', '2020-01-08 10:30:00', 4, 3),
+ (9, 'SN5255', '2020-01-09 11:05:00', '2020-01-09 13:20:00', 1, 4),
+ (10, 'SN5257', '2020-01-16 12:35:00', '2020-01-16 14:50:00', 1, 4),
+ (11, 'SN3727', '2020-01-26 14:40:00', '2020-01-26 17:10:00', 3, 4),
+ (12, 'BA8731', '2020-01-06 07:00:00', '2020-01-06 07:35:00', 4, 3),
+ (13, 'BA8731', '2020-01-07 07:00:00', '2020-01-07 07:35:00', 3, 2),
+ (14, 'BA8733', '2020-01-07 11:45:00', '2020-01-07 12:25:00', 1, 4),
+ (15, 'BA8735', '2020-01-09 18:10:00', '2020-01-09 18:50:00', 4, 1);
+ 
+insert into pas_vlu (pas_id, vlu_id) values
+ (2, 1),
+ (3, 1),
+ (4, 1),
+ (5, 2),
+ (6, 3),
+ (7, 4),
+ (8, 5),
+ (9, 6),
+ (10, 7),
+ (11, 8),
+ (13, 8),
+ (14, 8),
+ (15, 8),
+ (12, 9),
+ (1, 10),
+ (2, 10),
+ (3, 10),
+ (4, 10);
+ 
+ alter table vliegtuig add vlucht_id int;
+ alter table vliegtuig add foreign key (vlucht_id) REFERENCES vlucht(id);
+ 
+update vlucht set vl_id = 1 where id between 1 AND 5;
+
+update vlucht set vl_id = 2 where id between 6 AND 10;
+
+update vlucht set vl_id = 3 where id between 11 AND 15;
+
+alter table vlucht add m_id int;
+alter table vlucht add foreign key (m_id) REFERENCES maatschappij(id);
+
+update vlucht v  join maatschappij m
+set v.m_id = m.id
+where m.naam like '%SN%' = v.nummer like '%SN%' || m.naam like 'BA%' && v.nummer like 'BA%';
+
+
+-- QUERIES
+
+
+/*
+select p.naam from passagier p inner join pas_vlu pv on pv.pas_id = p.id
+inner join vlucht v on pv.vlu_id = v.id
+WHERE v.nummer like 'SN5253'
+order by naam desc;
+;*/
+
+/*
+select * from vlucht v inner join pas_vlu pv on v.id = pv.vlu_id
+inner join passagier p on pv.pas_id = p.id
+inner join  land l on l.id = p.land_id
+WHERE l.naam like lower('USA') ;*/
+
+/*
+select m.naam, count(m.naam) from maatschappij m right join vlucht v on v.m_id = m.id 
+group by m_id;
+*/
+
+/*select m.naam, count(m.naam) as som from maatschappij m right join vlucht v on v.m_id = m.id 
+group by m_id
+having som > 5;*/
+
+/*
+select m.naam , m_id from maatschappij m left join vlucht v on v.m_id = m.id 
+group by m_id;
+*/
+
+
+/*
+select l.naam, l.IATACode  from luchthaven l left join vlucht v on v.al_id = l.id
+where al_id IS NULL;*/
+
+/*
+
+select l.naam,count( p.geslacht),count(p2.geslacht) from passagier p inner join land l on p.land_id = l.id
+inner join passagier p2 on p2.land_id = l.id
+;
+*/
+
+/*
+select p.id, p.naam, count(l.naam) from passagier p  join pas_vlu pv on pv.pas_id = p.id
+join vlucht v on v.id = pv.vlu_id
+join luchthaven l on l.id = v.al_id
+where l.naam like 'Madrid'
+group by p.naam
+order by p.id;*/
+
+/*
+select p.id, p.naam , count(l.naam) from passagier p 
+join pas_vlu pv on pv.pas_id = p.id
+join vlucht v on pv.vlu_id = v.id
+join luchthaven l on l.id = al_id
+where l.naam like 'Madrid'
+group by p.id*/
+
+
+/*
+select * from vlucht v inner join luchthaven l on v.vl_id = l.id
+inner join luchthaven l2 on l.id = l2.id 
+inner join vlucht v2 on v2.al_id = l2.id
+where l.naam like 'Brussels' && l2.IATACode like 'EIN' && v2.al_id != v.al_id  ;
+*/
+/*
+create index vluchtnummer on vlucht (nummer);
+
+show indexes from vlucht;
+
+*/
+
+/*
+create or replace view v_vlucht
+as
+select upper(m.naam), v.vertrek, v.aankomst, upper(v.nummer) from vlucht v join maatschappij m on v.vl_id = m.id
+order by v.vertrek desc;
+
+*/
+
+-- TRIGGERS
+/*
+create table airbonus(
+id int auto_increment primary key,
+pass_id int,
+bonus int,
+
+foreign key (pass_id) REFERENCES passagier(id)
+)
+;
+update airbonus a join passagier p 
+set a.pass_id = p.id; 
+select * from airbonus;
+
+DELIMITER //
+
+create trigger bonus
+
+after insert on vlucht for each row
+
+begin
+
+insert into bonus (punt) values (10);
+
+END
+
+// DELIMITER ;
+
+DELIMITER //
+
+create trigger bonus
+
+after delete on vlucht  for each row
+
+begin
+
+insert into bonus (punt) values (-10);
+
+END
+
+// DELIMITER ;
+
+*/

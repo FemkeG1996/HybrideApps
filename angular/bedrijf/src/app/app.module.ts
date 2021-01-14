@@ -8,10 +8,11 @@ import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
-    AppComponent,HeaderComponent, MainComponent, FooterComponent
+    AppComponent,HeaderComponent, MainComponent, FooterComponent, UserComponent
   ],
   imports: [
     BrowserModule,

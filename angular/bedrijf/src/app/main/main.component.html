@@ -6,9 +6,48 @@
         <div class="col-12">
             <h3>Dashboard</h3>
         </div>
-        <div class="col-12 pb-2">{{teller}}</div>
+
         <div class="col-12 lijn pt-2">
+            <!-- 
+            <ul>
+                <li *ngFor="let g of users">
+                    {{g}}
+                </li>
+            </ul> -->
+            <!-- <div class="col-12 pb-2">{{teller}}</div> -->
+
+
             <h3>Medewerkers</h3>
+        </div>
+        <div class="col-12">Medewerkers</div>
+        <input type="text" name="voornaam" [(ngModel)] = 'voornaam' #vn><br>
+
+        <div class="col-12 pt-3">E-mail</div>
+        <input type="text" name="email" #em>
+
+        <div class="col-12 pt-3">Afbeelding</div>
+        <input type="url" name="Afbeelding" #af> <br>
+
+
+        <div class="col-12 mt-2">
+            <button (click)="addUser(vn,em,af)" class="btn btn-primary mr-5">Opslaan</button>
+            <button (click)='reset()'  class="btn btn-primary " [disabled]='knop()' >Reset</button>
+        </div>
+        <div>
+            <app-user *ngFor="let g of users" [element]="g"></app-user>
+        </div>
+
+        <!-- loopt lijst af en drukt ze apart af -->
+
+        <!-- 
+            <ul>
+                <li  *ngFor= "let g of users" >
+                    {{g}}
+                </li>
+            </ul> -->
+
+        <!-- <div class="col-12 pb-2">{{teller}}</div> -->
+        <!-- <h3>Medewerkers</h3>
         </div>
         <div class="col-12">Medewerkers</div>
         <div class="col-12 pt-2"><input type="text" id="naam" [value]="naam" [(ngModel)]='naam' (change)='naamwijzig'>
@@ -23,8 +62,10 @@
 
         <input type="text" [(ngModel)]='naam'>
         <input type="text" [(ngModel)]='mail'>
-        <input type="text" [(ngModel)]='afb'>
-        </div>
-    </div>
+        <input type="text" [(ngModel)]='afb'> -->
 
+
+        <!-- lijst met gebruikers  -->
+
+    </div>
 </div>
