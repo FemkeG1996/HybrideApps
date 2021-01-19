@@ -1,5 +1,6 @@
 import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
+import { GebruikerService } from '../gebruiker.service';
 import { gebruiker } from './gebruiker';
 
 @Component({
@@ -9,34 +10,38 @@ import { gebruiker } from './gebruiker';
 })
 export class MainComponent implements OnInit {
   //  teller : number = 0
-  public voornaam:string = '';
+  public voornaam: string = '';
   //  mail:string = ''
   //  afb:string = ''
   // titel: string = 'Toon Gegevens'
-    // aan = true ;
-  users: gebruiker[] = [];
+  // aan = true ;
+  gebruikers: gebruiker[] = [];
 
-  constructor() {
-    // this.getal();
-    
+  constructor(private gebruikerservice: GebruikerService) {
+
+ this.gebruikerservice.getGebruikers().subscribe( data =>{
+  this.gebruikers = data ;
+}) 
   }
 
   ngOnInit(): void {
   }
 
-  addUser(vn: HTMLInputElement , an: HTMLInputElement, ww: HTMLInputElement): void {
-   let g : gebruiker = new gebruiker(vn.value, an.value, ww.value);
-   this.users.push(g);
-   vn.value = '';
-   an.value = '';
-   ww.value = '';
+  addUser(vn: HTMLInputElement, an: HTMLInputElement, ww: HTMLInputElement): void {
+  this.gebruikerservice.addGebruiker(vn.value, an.value, ww.value);
+  this.gebruikerservice.getGebruikers().subscribe( data =>{
+    this.gebruikers = data ;
+  }) 
+  /*  vn.value = '';
+    an.value = '';
+    ww.value = '';*/
   }
-  reset(){   
-    this.users= [];
+  reset() {
+    this.gebruikers = [];
   }
 
-  knop(){
-    if(this.voornaam ==''){
+  knop() {
+    if (this.voornaam == '') {
       return true;
     } else {
       return false;

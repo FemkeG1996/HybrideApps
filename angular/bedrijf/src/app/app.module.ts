@@ -9,6 +9,8 @@ import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { UserComponent } from './user/user.component';
+import { HttpClientModule } from '@angular/common/http';
+import { GebruikerService } from './gebruiker.service';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,10 @@ import { UserComponent } from './user/user.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [GebruikerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

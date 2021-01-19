@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        
+    <style>
+        #box{
+            width: 400px;
+            height: 200px;
+            border: solid black;
+
+        }
+        .cirkel{
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: relative;
+            top: 50px;
+            left: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="box"></div>
+    <div id="1" class="cirkel"></div>
+<script>
+    obj = {
+        kleur : 'red',
+        cirkel : document.getElementById("1")
+    }
+
+    // Bind , maakt nieuw object ipv te veranderen
+
+    var settings = [ 50,100,'green'];
+    var verplaats = function (posX,posY,kleur)
+    {
+        this.cirkel.style.left = posX + "px";
+        this.cirkel.style.top = posY + "px";
+        this.cirkel.style.backgroundColor = kleur;
+    };
+
+    
+var MijnCirkel = verplaats.bind(obj);
+MijnCirkel(160,20, 'blue')
+ 
+
+
+</script>
+
+</body>
+</html>
