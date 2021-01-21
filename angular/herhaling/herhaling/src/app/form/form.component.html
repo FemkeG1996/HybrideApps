@@ -1,0 +1,15 @@
+<!-- Meest Gebruikte vorm -->
+<h3>NgModel</h3>
+<form>
+    Land: <input type="text" name="Land" [(ngModel)]="land">
+    Hoofdstad: <input type="text" name="Hoofdstad" [(ngModel)]="hoofdstad">
+    <input type="button" value="opslaan" (click)="opslaan()">
+</form>
+
+<!-- Minder Gebruikte Vorm -->
+<h3>Local Ref</h3>
+<form>
+    Land: <input type="text" name="Land" #l>
+    Hoofdstad: <input type="text" name="Hoofdstad" #h>
+    <input type="button" value="opslaan" (click)="opslaan2(l.value, h.value)">
+</form>

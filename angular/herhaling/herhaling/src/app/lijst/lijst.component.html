@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor= "let elem of landen">
+        {{elem.hoofdstad}} - {{elem.land}} - {{elem.id}}
+        <input type="button" (click)='verwijder(elem.id)' value="verwijder">
+    </li>
+</ul>
