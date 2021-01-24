@@ -9,6 +9,7 @@ import { ZoekService } from '../zoek.service';
 })
 export class ZoekComponent implements OnInit {
   titelSearch: string = '';
+  PosterSearch: string = '';
   filterMovies: Movie[] = [];
   constructor(private zoeker: ZoekService) {
    }
@@ -16,7 +17,7 @@ export class ZoekComponent implements OnInit {
   ngOnInit(): void {
   }
   zoeken() {
-  this.filterMovies  = this.zoeker.searchMovie(this.titelSearch);
-  console.log(this.filterMovies)
+  this.zoeker.getMovies(this.titelSearch).subscribe(data => {this.filterMovies = data});
   }
+  
 }

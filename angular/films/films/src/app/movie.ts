@@ -1,6 +1,5 @@
 export class Movie {
-title:string = '';
 // year: number = 0;
 // poster
-
+constructor(public Title:string, public Poster:string, public Year:string ){}
 }

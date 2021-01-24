@@ -1,0 +1,24 @@
+<form>
+    <input name="zoekterm" #z>
+    <input type="button" value="zoeken" (click)= "zoeken(z.value,1)">
+</form>
+
+<br>
+
+Ingrediënten: <br>
+<form>
+    <select name="ingred" #s>
+        <option *ngFor= 'let i of ingredienten' value="{{i.strIngredient}}">{{i.strIngredient}}</option>
+    </select>
+    <input type="button" value="zoeken" (click)= 'zoeken(s.value,2)'>
+</form>
+
+
+Resultaten: <br>
+<p *ngFor='let gerecht of menu'>
+    {{gerecht.strMeal}}
+    <br>
+    <img [src]="gerecht.strMealThumb" alt="" width="150">
+    <br>
+    <a (click)='toonIngredienten(gerecht)'>Toon ingrediënten</a>
+</p>
