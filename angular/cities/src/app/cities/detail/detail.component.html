@@ -1,0 +1,13 @@
+<p>Details</p>
+<ul class="list-group">
+    <li class="list-group-item">Naam: {{city.name}}</li>
+    <li class="list-group-item">Povincie: {{city.provincie}}</li>
+    <li class="list-group-item">Highlights: <br>
+        <span *ngFor= "let h of city.highlights">
+          <strong>{{h}}</strong>  <br>
+        </span>
+    </li>
+</ul>
+
+<button (click)= 'rate(+1)' class="btn btn-primary">+1</button>
+<button (click)= 'rate(-1)' class="btn btn-primary">-1</button>

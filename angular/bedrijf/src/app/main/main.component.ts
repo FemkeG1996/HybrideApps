@@ -21,6 +21,7 @@ export class MainComponent implements OnInit {
 
  this.gebruikerservice.getGebruikers().subscribe( data =>{
   this.gebruikers = data ;
+  console.log(data);
 }) 
   }
 

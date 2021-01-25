@@ -11,10 +11,13 @@ import { FormsModule } from '@angular/forms';
 import { UserComponent } from './user/user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GebruikerService } from './gebruiker.service';
+import { HomeComponent } from './home/home.component';
+import { DetailComponent } from './detail/detail.component';
+import { MedewerkersComponent } from './medewerkers/medewerkers.component';
 
 @NgModule({
   declarations: [
-    AppComponent,HeaderComponent, MainComponent, FooterComponent, UserComponent
+    AppComponent,HeaderComponent, MainComponent, FooterComponent, UserComponent, HomeComponent, DetailComponent, MedewerkersComponent
   ],
   imports: [
     BrowserModule,

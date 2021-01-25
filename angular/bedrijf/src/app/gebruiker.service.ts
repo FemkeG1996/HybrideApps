@@ -24,6 +24,10 @@ export class GebruikerService {
   }));
   }
 
+getGebruiker(id: any): Observable<gebruiker> {
+  return this.http.get<gebruiker>("https://test-9333c-default-rtdb.europe-west1.firebasedatabase.app/Gebruikers/"+ id+".json")
+}
+
   addGebruiker( vn:string , an:string, ww:string)
 {
  let gebr: gebruiker = new gebruiker(vn,an,ww);

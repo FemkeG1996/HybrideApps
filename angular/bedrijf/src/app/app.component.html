@@ -1,3 +1,9 @@
 <app-header></app-header>
-<app-main></app-main>
+<!-- <app-main></app-main> -->
 <app-footer></app-footer>
+Welkom <br>
+<ul>
+    <li><a routerLink= '' routerLinkActive= "actief" [routerLinkActiveOptions]= "{ exact: true }">Home</a></li>
+    <li><a routerLink= 'gebruikers' routerLinkActive= "actief">Gebruikers</a></li>
+</ul>
+<router-outlet></router-outlet>

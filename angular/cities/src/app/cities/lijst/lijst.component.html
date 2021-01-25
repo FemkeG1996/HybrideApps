@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-6">
+        <ul class="list-group">
+            <li *ngFor="let c of cities" class="list-group-item" (click)= 'showDetail(c)'>
+                {{c.name}} <span class="badge badge-dark float-right">{{c.rating}}</span>
+            </li>
+            </ul>
+    </div>
+    <div class="col-6">
+<app-detail [city]="selectedcity" (rating)= 'updateRating($event)'></app-detail>
+    </div>
+</div>

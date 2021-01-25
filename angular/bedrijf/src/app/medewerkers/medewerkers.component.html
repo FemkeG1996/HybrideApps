@@ -1,0 +1,19 @@
+<h3>Medewerkers</h3>
+
+<div class="col-12">Voornaam</div>
+<input type="text" name="Voornaam" [(ngModel)] = 'voornaam' #vn><br>
+
+<div class="col-12 pt-3">Achternaam</div>
+<input type="text" name="Achternaam" #an>
+
+<div class="col-12 pt-3">Wachtwoord</div>
+<input type="text" name="Wachtwoord" #ww> <br>
+
+
+<div class="col-12 mt-2">
+    <button (click)="addUser(vn,an,ww)" class="btn btn-primary mr-5">Opslaan</button>
+    <button (click)='reset()'  class="btn btn-primary " [disabled]='knop()' >Reset</button>
+</div>
+<div>
+    <app-user *ngFor="let g of gebruikers" [element]="g"></app-user>
+</div>

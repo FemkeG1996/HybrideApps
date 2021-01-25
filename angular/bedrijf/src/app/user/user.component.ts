@@ -11,7 +11,7 @@ export class UserComponent {
 
   @Input() element:gebruiker = new gebruiker('','','','');
   constructor(private   GebruikerService : GebruikerService) { }
-public verwijderGebr(id : string){
+public verwijderGebr(id : any){
 this.GebruikerService.deleteGebruiker(id);
 }
 
