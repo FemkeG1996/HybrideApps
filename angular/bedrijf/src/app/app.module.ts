@@ -14,10 +14,11 @@ import { GebruikerService } from './gebruiker.service';
 import { HomeComponent } from './home/home.component';
 import { DetailComponent } from './detail/detail.component';
 import { MedewerkersComponent } from './medewerkers/medewerkers.component';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
   declarations: [
-    AppComponent,HeaderComponent, MainComponent, FooterComponent, UserComponent, HomeComponent, DetailComponent, MedewerkersComponent
+    AppComponent,HeaderComponent, MainComponent, FooterComponent, UserComponent, HomeComponent, DetailComponent, MedewerkersComponent, ListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,20 +1,20 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import { GebruikerService } from '../gebruiker.service';
 import { gebruiker } from './gebruiker';
 @Component({
-  selector: 'app-medewerkers',
-  templateUrl: './medewerkers.component.html',
-  styleUrls: ['./medewerkers.component.scss']
+  selector: 'app-list',
+  templateUrl: './list.component.html',
+  styleUrls: ['./list.component.scss']
 })
-export class MedewerkersComponent implements OnInit {
+export class ListComponent implements OnInit {
 
   public voornaam: string = '';
 
   gebruikers: gebruiker[] = [];
   public aantal : number = 0;
 
-  constructor(private gebruikerservice: GebruikerService, private router:Router) {
+  constructor(private gebruikerservice: GebruikerService,private router: Router ) {
 
  this.gebruikerservice.getGebruikers().subscribe( data =>{
   this.gebruikers = data ;
@@ -30,7 +30,6 @@ export class MedewerkersComponent implements OnInit {
   this.gebruikerservice.getGebruikers().subscribe( data =>{
     this.gebruikers = data ;
   }) 
-  this.router.navigateByUrl('Medewerkers')
   }
   reset() {
     this.gebruikers = [];
@@ -43,5 +42,7 @@ export class MedewerkersComponent implements OnInit {
       return false;
     }
   }
-
+  nieuw(){
+    this.router.navigateByUrl('nieuw')
+  }
 }

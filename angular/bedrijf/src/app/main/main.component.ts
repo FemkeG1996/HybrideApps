@@ -1,5 +1,5 @@
 import { stringify } from '@angular/compiler/src/util';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { GebruikerService } from '../gebruiker.service';
 import { gebruiker } from './gebruiker';
 
@@ -16,11 +16,12 @@ export class MainComponent implements OnInit {
   // titel: string = 'Toon Gegevens'
   // aan = true ;
   gebruikers: gebruiker[] = [];
-
+ public aantal : number = 0;
   constructor(private gebruikerservice: GebruikerService) {
 
  this.gebruikerservice.getGebruikers().subscribe( data =>{
-  this.gebruikers = data ;
+  this.gebruikers = data ; 
+  this.aantal = data.length;
   console.log(data);
 }) 
   }
@@ -28,26 +29,26 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addUser(vn: HTMLInputElement, an: HTMLInputElement, ww: HTMLInputElement): void {
-  this.gebruikerservice.addGebruiker(vn.value, an.value, ww.value);
-  this.gebruikerservice.getGebruikers().subscribe( data =>{
-    this.gebruikers = data ;
-  }) 
+  // addUser(vn: HTMLInputElement, an: HTMLInputElement, ww: HTMLInputElement): void {
+  // this.gebruikerservice.addGebruiker(vn.value, an.value, ww.value);
+  // this.gebruikerservice.getGebruikers().subscribe( data =>{
+  //   this.gebruikers = data ;
+  // }) 
   /*  vn.value = '';
     an.value = '';
     ww.value = '';*/
-  }
-  reset() {
-    this.gebruikers = [];
-  }
+  // }
+  // reset() {
+  //   this.gebruikers = [];
+  // }
 
-  knop() {
-    if (this.voornaam == '') {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  // knop() {
+  //   if (this.voornaam == '') {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
   // getal(){
   //  setInterval(() => {this.teller++},1000)
   // }
