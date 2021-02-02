@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { City } from '../city';
+import { CityService } from '../city.service';
 
 @Component({
   selector: 'app-lijst',
@@ -7,26 +9,15 @@ import { City } from '../city';
   styleUrls: ['./lijst.component.scss']
 })
 export class LijstComponent implements OnInit {
-cities : City[] = [
-{
-  id:1,
-name: 'Leuven',
-provincie: 'Vlaams-Brabant',
-highlights: ["Begijnhof", "Kruidtuin"],
-rating : 5
-},
-{
-  id: 2,
-  name: 'Diest',
-  provincie: "Vlaams-Brabant",
-  highlights: ['Citadel','Begijnhof'],
-  rating : 4
-}
-];
+//cities : City[] = [];
+cities$: Observable<City[]>;
+
 selectedcity: City;
-  constructor() { }
+
+  constructor(private cityService:CityService) { }
 
   ngOnInit(): void {
+  this.cities$ =  this.cityService.getCities();
   }
 showDetail(city : City){
   this.selectedcity = city;

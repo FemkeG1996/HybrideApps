@@ -1,0 +1,28 @@
+<h3>Honden</h3>
+<div class="d-flex justify-content-end">
+    <button class="btn btn-primary my-2" type="button" (click)="nieuwFormulier()">+ Nieuwe hond</button>
+</div>
+
+<div *ngFor="let hond of honden" class="card mb-3" [routerLink]="['/edit/update/',hond.id]">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="{{hond.foto}}" alt="hond {{hond.id}}" class="img-fluid rounded">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{hond.naam}}</h5>
+                <div class="card-text">
+                    <ul class="list-unstyled">
+                        <li>{{hond.ras}}</li>
+                        <li>{{hond.kleur}}</li>
+                        <li>{{hond.inenting}}</li>
+                        <li>{{hond.geslacht}}</li>
+                        <li>
+                            Bio {{hond.bio}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

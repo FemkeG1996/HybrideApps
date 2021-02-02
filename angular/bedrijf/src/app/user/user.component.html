@@ -1,5 +1,5 @@
 <div class="container kader mb-1">
-<p >Voornaam: {{element.Voornaam}} {{element.Achternaam}}  </p>
+<p >Voornaam: {{element.Voornaam | uppercase}} {{element.Achternaam | uppercase}}  </p>
 <p>Wachtwoord: {{element.Wachtwoord}} <button class="rechts" (click) = 'verwijderGebr(element.id)'>Verwijderen</button></p>
 
 </div>
