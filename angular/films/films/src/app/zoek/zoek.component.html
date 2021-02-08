@@ -8,6 +8,7 @@
     <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" (click)='zoeken()'>Search</button>
     <!-- www.omdbapi.com/?apikey=57d509c4&s=frozen -->
 
+    <button (click)= 'naarFavo()'> Favoriete Films</button>
 </div>
 
 <div  *ngFor="let f of filterMovies">
@@ -16,4 +17,8 @@
     <img class="container" [src]="f.Poster" alt=""> 
 </div>
     <p class="p"> {{f.Year}}</p>
+
+    <div>
+        <button (click) = 'maakFavo(f)'>Favoriet</button>
+    </div>
 </div>

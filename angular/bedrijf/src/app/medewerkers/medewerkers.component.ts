@@ -43,5 +43,4 @@ export class MedewerkersComponent implements OnInit {
       return false;
     }
   }
-
 }

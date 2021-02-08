@@ -1,0 +1,5 @@
+<p *ngIf="!landen.length">Er zijn nog geen landen</p>
+<ul>
+  <li *ngFor="let l of landen" (click)="toonStad(l)"> {{ l.naam }} </li>
+</ul>
+<p>Hoofdstad: {{ gekozen }} </p>

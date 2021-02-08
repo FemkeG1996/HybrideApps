@@ -3,21 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ZoekComponent } from './zoek/zoek.component';
-import { HttpClientModule } from '@angular/common/http';
+import { LandenComponent } from './landen/landen.component';
+import { LandformComponent } from './landform/landform.component';
 import { FormsModule } from '@angular/forms';
-import { FavoComponent } from './favo/favo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ZoekComponent,
-    FavoComponent
+    LandenComponent,
+    LandformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
     FormsModule
   ],
   providers: [],

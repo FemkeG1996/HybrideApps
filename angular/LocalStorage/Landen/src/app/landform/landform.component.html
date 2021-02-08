@@ -1,0 +1,22 @@
+<hr>
+Met REFERENCE VARIABLES<br>
+   <label>Naam:</label>
+   <input type="Text" name="naam" #n>
+   <br>
+   <label>Hoofdstad:</label>
+   <input type="Text" name="hoofdstad" #h>
+   <br>
+   <button (click)="opslaan(n,h)">Opslaan</button>
+
+   <hr>
+
+
+   Met NGMODEL<br>
+   <label>Naam:</label>
+   <input type="Text" name="naam" [(ngModel)]="n2">
+   <br>
+   <label>Hoofdstad:</label>
+   <input type="Text" name="hoofdstad" [(ngModel)]="h2">
+   <br>
+   <button (click)="opslaan2()">Opslaan</button>
+
