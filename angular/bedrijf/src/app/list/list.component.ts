@@ -10,10 +10,8 @@ import { gebruiker } from './gebruiker';
 export class ListComponent implements OnInit {
 
   public voornaam: string = '';
-
   gebruikers: gebruiker[] = [];
   public aantal : number = 0;
-
   constructor(private gebruikerservice: GebruikerService,private router: Router ) {
 
  this.gebruikerservice.getGebruikers().subscribe( data =>{
@@ -44,5 +42,8 @@ export class ListComponent implements OnInit {
   }
   nieuw(){
     this.router.navigateByUrl('nieuw')
+  }
+  zoek(){
+    this.router.navigateByUrl('zoek')
   }
 }

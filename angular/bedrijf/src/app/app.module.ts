@@ -15,10 +15,11 @@ import { HomeComponent } from './home/home.component';
 import { DetailComponent } from './detail/detail.component';
 import { MedewerkersComponent } from './medewerkers/medewerkers.component';
 import { ListComponent } from './list/list.component';
+import { ZoekComponent } from './zoek/zoek.component';
 
 @NgModule({
   declarations: [
-    AppComponent,HeaderComponent, MainComponent, FooterComponent, UserComponent, HomeComponent, DetailComponent, MedewerkersComponent, ListComponent
+    AppComponent,HeaderComponent, MainComponent, FooterComponent, UserComponent, HomeComponent, DetailComponent, MedewerkersComponent, ListComponent, ZoekComponent
   ],
   imports: [
     BrowserModule,

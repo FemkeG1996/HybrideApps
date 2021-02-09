@@ -5,6 +5,7 @@ import { DetailComponent } from './detail/detail.component';
 import { MainComponent } from './main/main.component';
 import { MedewerkersComponent } from './medewerkers/medewerkers.component';
 import { ListComponent } from './list/list.component';
+import { ZoekComponent } from './zoek/zoek.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path : 'nieuw',
     component : MedewerkersComponent
+  },
+  {
+    path : 'zoek',
+    component : ZoekComponent
   }
 ];
 
