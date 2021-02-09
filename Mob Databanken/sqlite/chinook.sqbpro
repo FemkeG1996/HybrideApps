@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="D:/VS code Oefeningen/hybrideapps/HybrideApps/Mob Databanken/sqlite/chinook.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="3954"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,5:mainAlbum"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Album" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="61"/><column index="2" value="300"/><column index="3" value="59"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">select Track.Name, Track.Composer 
+FROM Track INNER JOIN Album on Track.AlbumId = Album.AlbumId
+WHERE Album.ArtistId = (SELECT Artist.ArtistId FROM Artist WHERE Artist.Name = &quot;Aerosmith&quot;);</sql><sql name="SQL 2">SELECT *
+FROM Artist
+WHERE Artist.ArtistId NOT IN (SELECT Album.ArtistId FROM Album);
+</sql><sql name="SQL 3">SELECT upper(Artist.Name)
+FROM Artist
+WHERE Artist.Name LIKE '%ã%';</sql><sql name="SQL 4">SELECT (Customer.FirstName  een spatie tussen aanhalingstekens met dubbele pipe ervoor en erachter  Customer.LastName) as 'Klanten uit Canada'
+FROM Customer
+WHERE Customer.Country = 'Canada';</sql><sql name="SQL 5">SELECT Invoice.BillingCountry, count(Invoice.InvoiceId)
+FROM Invoice
+GROUP BY Invoice.BillingCountry
+ORDER BY Invoice.BillingCountry;</sql><sql name="SQL 6">select InvoiceId, count(InvoiceLineId) as aantal from InvoiceLine
+GROUP BY InvoiceId
+HAVING aantal &gt; 10;</sql><sql name="SQL 7">SELECT Playlist.Name, count(PlaylistTrack.TrackId)
+FROM Playlist INNER JOIN PlaylistTrack ON Playlist.PlaylistId = PlaylistTrack.PlaylistId
+GROUP BY Playlist.Name;</sql><sql name="SQL 8">SELECT DISTINCT Invoice.BillingCountry
+FROM Invoice;</sql><sql name="SQL 9">SELECT DISTINCT MediaType.Name
+FROM MediaType INNER JOIN Track ON MediaType.MediaTypeId = Track.MediaTypeId
+WHERE Track.GenreId = (SELECT Genre.GenreId FROM Genre WHERE Genre.Name = &quot;Classical&quot;);</sql><sql name="SQL 10">SELECT (Employee.FirstName  &quot; &quot;  Employee.LastName) as &quot;Sales Agent&quot;, sum(Invoice.Total) as &quot;Total for Agent&quot;
+FROM Employee 
+INNER JOIN Customer ON Employee.EmployeeId = Customer.SupportRepId
+INNER JOIN Invoice ON Invoice.CustomerId = Customer.CustomerId
+GROUP BY &quot;Sales Agent&quot;;</sql><sql name="SQL 11">SELECT verkoper, max(&quot;totaal&quot;)
+FROM (
+
+SELECT (Employee.FirstName  &quot; &quot;  Employee.LastName) as &quot;verkoper&quot;, sum(Invoice.Total) as &quot;totaal&quot;
+FROM Employee 
+INNER JOIN Customer ON Employee.EmployeeId = Customer.SupportRepId
+INNER JOIN Invoice ON Invoice.CustomerId = Customer.CustomerId
+WHERE Invoice.InvoiceDate LIKE &quot;2012%&quot;
+GROUP BY &quot;verkoper&quot;
+
+)</sql><current_tab id="10"/></tab_sql></sqlb_project>
