@@ -1,0 +1,55 @@
+<!-- <ion-header>
+  <ion-toolbar color="primary">
+    <ion-title> Recepten </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Nieuw Recept</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating" color="primary">Naam van Gerecht</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Instructies</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <div class="ion-text-right">
+      <ion-button  color="danger" fill="outline" border-color="danger">Reset</ion-button>
+      <ion-button (click) = "klik()">Opslaan</ion-button>
+    </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content> -->
+
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title> Gerechten </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor='let g of gerechten'>
+    <ion-item>
+    <ion-thumbnail> <img src={{g.foto}} alt=""></ion-thumbnail> 
+    <ion-label>
+      <ion-row>
+      <ion-col class=" ion-text-center">   {{g.naam}}</ion-col>
+ 
+  </ion-row>
+  <ion-row>
+    <ion-col class=" ion-text-center"><ion-button (click) = "klik()">Bestellen</ion-button></ion-col>
+     
+    </ion-row>
+    </ion-label>
+  </ion-item>
+
+  </ion-card>
+
+  
+</ion-content>
