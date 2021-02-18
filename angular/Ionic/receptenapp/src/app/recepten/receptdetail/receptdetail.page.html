@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-title>{{ recept.naam }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col class="ion-no-padding">
+        <ion-img [src]='recept.img'></ion-img>
+        <h1 class="ion-text-center">{{recept.naam}}</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        {{recept.ingredienten}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col  class="ion-text-center" >
+        <ion-button color="danger" (click)="onDelete();">Verwijderen</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

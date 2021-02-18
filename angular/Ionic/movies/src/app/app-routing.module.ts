@@ -2,15 +2,14 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-
   {
     path: '',
-    redirectTo: 'recepten',
+    redirectTo: 'movie',
     pathMatch: 'full'
   },
   {
-    path: 'recepten',
-    loadChildren: () => import('./recepten/recepten.module').then( m => m.ReceptenPageModule)
+    path: 'movie',
+    loadChildren: () => import('./movie/movie.module').then( m => m.MoviePageModule)
   },
 ];
 

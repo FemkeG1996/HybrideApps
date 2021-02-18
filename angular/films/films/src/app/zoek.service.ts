@@ -19,7 +19,7 @@ export class ZoekService {
       var arr:Movie[] =[];
 
       for (let x in data["Search"]){
-        arr.push(new Movie(data["Search"][x]['Title'],data["Search"][x]['Poster'],data["Search"][x]['Year']  ));
+        arr.push(new Movie(data["Search"][x]['Title'],data["Search"][x]['Poster'],data["Search"][x]['Year']));
       }
       console.log(arr)
       return arr;

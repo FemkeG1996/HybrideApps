@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Movie Searcher</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+  <ion-item>
+  <ion-input type='search' name='zoek' [(ngModel)]="zoek"></ion-input>
+  <ion-button (click)='search(zoek)'>Search</ion-button>
+</ion-item>
+<ion-item *ngFor='let m of searchMovie'>
+   <ion-label>{{m.title}}</ion-label> 
+   <ion-label>{{m.year}}</ion-label> 
+</ion-item>
+
+  </ion-list>
+</ion-content>
