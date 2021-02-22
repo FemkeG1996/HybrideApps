@@ -19,17 +19,8 @@ export class MoviePage implements OnInit {
 
   search(){
     
-    // this.searchMovie= [];
-    // for(let i = 0; i< this.movieList.length; i++)
-    // {
-    //   if(this.movieList[i].title == zoek)
-    //   {
-    //     this.searchMovie.push(this.movieList[i])
-    //   }
-    // }
     this.zs.getMovies(this.zoek).subscribe(data => {this.searchMovie = data});
     console.log('zoeken')
-
 
   }
 }

@@ -1,5 +1,6 @@
 export class Movie {
-    title: String;
-    year: number;
-    img : string;
+    Title: String;
+    imdbID: string;
+    Year: number;
+    Poster : string;
 }

@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Timer
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-text-center">
+ <ion-button slot="" (click)= 'startTimer()'>Start</ion-button>
+ <ion-button slot="" (click)= 'pause()'>Pause Timer</ion-button>
+ <ion-input (change)="setStart()" type="number" name="tijd" [(ngModel)]= "seconden"></ion-input>
+ <div>
+ <circle-progress [title]="seconden.toString()" subtitle="" units="" [percent]="percentage" [radius]="100" [outerStrokeWidth]="16" [innerStrokeWidth]="8" [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="false" [animationDuration]="300"></circle-progress>
+</div>
+<ion-button slot="" (click)= 'reset()'>Reset Timer</ion-button>
+</div>
+</ion-content>

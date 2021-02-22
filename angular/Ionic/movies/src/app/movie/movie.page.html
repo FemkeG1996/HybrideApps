@@ -11,8 +11,10 @@
   <ion-button (click)='search(zoek)'>Search</ion-button>
 </ion-item>
 <ion-item *ngFor='let m of searchMovie'>
-   <ion-label>{{m.title}}</ion-label> 
-   <ion-label>{{m.year}}</ion-label> 
+   <ion-label>{{m.Title}}</ion-label> 
+   <ion-label>{{m.Year}}</ion-label> 
+   <ion-label>{{m.imdbID}}</ion-label> 
+   <ion-img [routerLink]="['../detail',m.imdbID]" slot="start" [src]='m.Poster'></ion-img> 
 </ion-item>
 
   </ion-list>

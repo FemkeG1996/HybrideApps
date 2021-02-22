@@ -48,14 +48,19 @@ export class ZoekService {
 
       for (let x in data["Search"]){
         let m : Movie = new Movie();
-        m.title = data["Search"][x]['Title'];
-        m.img = data["Search"][x]['Poster'];
-        m.year = data["Search"][x]['Year'] 
+        m.Title = data["Search"][x]['Title'];
+        m.Poster = data["Search"][x]['Poster'];
+        m.Year = data["Search"][x]['Year'];
+        m.imdbID = data["Search"][x]['imdbID'];
         arr.push(m);
       }
       console.log(arr)
       return arr;
     })
     )
+    }
+
+    getDetail(id:string):Observable<Movie>{
+      return this.http.get<any>("http://www.omdbapi.com/?apikey=57d509c4&i="+ id)
     }
 }
