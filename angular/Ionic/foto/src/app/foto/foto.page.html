@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>foto</ion-title>
+    <ion-back-button></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-button (click)='foto()'>Neem Foto</ion-button>
+<ion-img *ngIf="base64data !=''" [src]="'data:image/jpeg;base64,'+ base64data"></ion-img>
+{{base64data}}
+
+</ion-content>
