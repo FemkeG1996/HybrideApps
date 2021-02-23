@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { DeviceBatteryInfo, Plugins } from '@capacitor/core';
 
+const { Device } = Plugins;
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -7,6 +9,14 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  info: DeviceBatteryInfo;
 
+  constructor() {}
+ionViewWillEnter(){
+  this.getInfo()
+}
+async getInfo(){
+
+  this.info = await Device.getBatteryInfo();
+}
 }

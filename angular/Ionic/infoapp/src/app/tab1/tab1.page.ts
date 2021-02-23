@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { DeviceInfo, Plugins } from '@capacitor/core';
 
+const { Device } = Plugins;
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -7,6 +9,16 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  deviceInfo: DeviceInfo;
 
+  constructor() { }
+
+  ionViewWillEnter() {
+    this.getInfo();
+  }
+
+  async getInfo() {
+    this.deviceInfo = await Device.getInfo();
+
+  }
 }

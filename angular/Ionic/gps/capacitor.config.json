@@ -1,0 +1,20 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "gps",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  
+  "server": {
+    "allowNavigation": [
+      "openstreetmap.org",
+      "*.openstreetmap.org"
+    ]
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
