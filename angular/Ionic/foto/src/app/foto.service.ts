@@ -10,9 +10,10 @@ export class FotoService {
 
   constructor(private http:HttpClient) { }
 
-  saveFoto(Base64:string): Observable<Foto>{
+  saveFoto(Base64:string, naam:string): Observable<Foto>{
     let f = new Foto();
     f.data = Base64;
+    f.naam = naam;
     return this.http.post<Foto>("https://foto-ea1a2-default-rtdb.europe-west1.firebasedatabase.app/.json", f)
   }
   getFotos(): Observable<Foto[]>{
@@ -30,5 +31,8 @@ export class FotoService {
       }
       )
     )
+  }
+  deleteFoto(id: string){
+   this.http.delete("https://foto-ea1a2-default-rtdb.europe-west1.firebasedatabase.app/"+id+".json").subscribe(data => {})
   }
 }

@@ -1,9 +1,13 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>galerij</ion-title>
+    <ion-title class="ion-text-center ion-padding-top">Galerij</ion-title>
+    <ion-back-button></ion-back-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<ion-img *ngFor='let f of fotos' [src]="'data:image/jpeg;base64,'+ f.data"></ion-img>
+  <div  *ngFor='let f of fotos'>
+<ion-img [src]="'data:image/jpeg;base64,'+ f.data"></ion-img>
+<ion-button (click)='deleteKnop(f.id)'>Delete</ion-button>
+</div>
 </ion-content>
