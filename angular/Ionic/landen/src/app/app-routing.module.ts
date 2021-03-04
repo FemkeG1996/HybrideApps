@@ -10,7 +10,13 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },
+  }
+  ,
+  {
+    path: 'kaart',
+    redirectTo: 'kaart',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({

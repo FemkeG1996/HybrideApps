@@ -1,20 +1,20 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Landen
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-searchbar (ionChange)="zoekLand(land.value)" #land ></ion-searchbar>
+  <ion-card *ngFor='let land of Landen'>
+    <ion-img [src]='land.flag'></ion-img>
+    <ion-title>{{land.name}}</ion-title>
+    <ion-col >Talen :</ion-col>
+    <ion-col  *ngFor="let taal of land.languages"> {{taal.name}}</ion-col>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-list  class="ion-text-center"> <ion-button (click)="naarMap(land.latlng)">Kaart</ion-button></ion-list>
+   
+  </ion-card>
 </ion-content>

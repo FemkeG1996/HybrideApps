@@ -1,0 +1,69 @@
+{
+  "name": "angular-sqlite-app-starter",
+  "version": "3.0.0-beta.4",
+  "description": "Ionic/Angular SQLite Application Starter",
+  "author": "Jean Pierre Quéau",
+  "license": "MIT",
+  "homepage": "./",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/common": "latest",
+    "@angular/core": "latest",
+    "@angular/forms": "latest",
+    "@angular/platform-browser": "latest",
+    "@angular/platform-browser-dynamic": "latest",
+    "@angular/router": "latest",
+    "@capacitor-community/sqlite": "^3.0.0-beta.4",
+    "@capacitor/android": "next",
+    "@capacitor/core": "next",
+    "@capacitor/dialog": "^0.4.1",
+    "@capacitor/ios": "next",
+    "@ionic-native/core": "latest",
+    "@ionic-native/splash-screen": "latest",
+    "@ionic-native/status-bar": "latest",
+    "@ionic/angular": "latest",
+    "rxjs": "~6.5.5",
+    "tslib": "^2.0.0",
+    "zone.js": "~0.10.3"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "latest",
+    "@angular/cli": "latest",
+    "@angular/compiler": "latest",
+    "@angular/compiler-cli": "latest",
+    "@angular/language-service": "latest",
+    "@capacitor-community/electron": "^3.0.0-1",
+    "@capacitor/cli": "next",
+    "@ionic/angular-toolkit": "latest",
+    "@types/jasmine": "~3.5.0",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
+    "codelyzer": "^6.0.0",
+    "jasmine-core": "~3.5.0",
+    "jasmine-spec-reporter": "~5.0.0",
+    "karma": "~5.0.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage-istanbul-reporter": "~3.0.2",
+    "karma-jasmine": "~3.3.0",
+    "karma-jasmine-html-reporter": "^1.5.0",
+    "protractor": "~7.0.0",
+    "ts-node": "~8.3.0",
+    "tslint": "~6.1.0",
+    "typescript": "~4.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jepiqueau/angular-sqlite-app-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jepiqueau/angular-sqlite-app-starter.git/issues"
+  }
+}

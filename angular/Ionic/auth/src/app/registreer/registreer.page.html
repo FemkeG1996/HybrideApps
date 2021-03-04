@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>registreer</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>Login</h1>
+  <form (ngSubmit)="registreer(f)" #f="ngForm">
+    <ion-item>
+      <ion-label position="floating">E-mail</ion-label>
+      <ion-input name="email" ngModel #u="ngModel"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+  <ion-input name="pass" ngModel #p="ngModel"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input name="name" ngModel #us="ngModel"></ion-input>
+    </ion-item>
+
+  <ion-button type="submit">Registreer Nu</ion-button>
+</form>
+</ion-content>

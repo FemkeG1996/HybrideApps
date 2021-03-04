@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>items</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-input name="tekst" placeholder="tekst" #tekst clearInput="true"></ion-input>
+    <!-- <ion-button  (click)="addMessage(tekst.value)">Send</ion-button> -->
+
+<ion-segment  (ionChange)="segmentChanged($event)">
+  <ion-segment-button value="send" (click)="addMessage(tekst)">
+  <ion-label>Send</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="all" (click)="getAll()">
+    <ion-label>Alle</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="mine" (click)="getMine()">
+    <ion-label>Mijn</ion-label>
+  </ion-segment-button>
+</ion-segment>
+
+
+<ion-item *ngFor='let l of ItemsList'>
+ {{l.username}} : {{l.tekst}}
+</ion-item>
+</ion-content>

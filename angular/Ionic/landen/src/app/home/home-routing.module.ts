@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
+  },
+  {
+    path: 'kaart',
+    loadChildren: () => import('./kaart/kaart.module').then( m => m.KaartPageModule)
   }
 ];
 
