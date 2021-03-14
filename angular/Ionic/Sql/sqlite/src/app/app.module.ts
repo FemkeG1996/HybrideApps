@@ -10,13 +10,15 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SQLiteService } from './services/sqlite.service';
 import { DetailService } from './services/detail.service';
+import { AppVersion } from '@ionic-native/app-version/ngx';
+
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
-    StatusBar,
+    StatusBar,AppVersion,
     SplashScreen,
     SQLiteService,
     DetailService,

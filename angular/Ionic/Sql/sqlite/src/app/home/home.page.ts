@@ -5,7 +5,7 @@ import { DetailService } from '../services/detail.service';
 import { SQLiteService } from '../services/sqlite.service';
 import { TodoService } from '../services/to-do.service';
 import { ToDoitem } from '../to-doitem';
-
+import { AppVersion } from '@ionic-native/app-version/ngx';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -16,8 +16,10 @@ export class HomePage {
   public exJson: boolean
   todos: ToDoitem[] = [];
   db : any;
-  id: number
-  constructor(private _sqlite: SQLiteService,private _detailService:DetailService , private modalController: ModalController, private tds: TodoService)
+  id: number;
+  version : string;
+  AppName: string;
+  constructor(private appVersion: AppVersion,private _sqlite: SQLiteService,private _detailService:DetailService , private modalController: ModalController, private tds: TodoService)
   {
 
   }
@@ -26,7 +28,8 @@ export class HomePage {
     this.exConn = this._detailService.getExistingConnection();
     this.exJson = this._detailService.getExportJson();
     console.log("**** ionViewWillEnter " + this.exConn);
-    this.loadItems()
+    this.loadItems();
+    this.loadVersion();
 }
 async loadItems(){
   this.todos = await this.tds.getItems();
@@ -49,5 +52,19 @@ async addItem(){
  async delete(id){
   await this.tds.deleteItems(id);
   this.todos = await this.tds.getItems();
+}
+async loadVersion(){
+  this.appVersion.getVersionNumber().then(value => {
+    this.AppName = value;
+  }).catch(err => {
+    alert(err);
+  });
+}
+getAppName(){
+  this.appVersion.getAppName().then(value => {
+    this.AppName = value;
+  }).catch(err => {
+    alert(err);
+  });
 }
 }

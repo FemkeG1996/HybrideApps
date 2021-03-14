@@ -1,6 +1,6 @@
 {
-  "appId": "com.jeep.app.ionic.angular",
-  "appName": "angular-sqlite-app-starter",
+  "appId": "be.testapp.todo",
+  "appName": "Test App Todo",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
@@ -9,9 +9,5 @@
       "launchShowDuration": 0
     }
   },
-  "cordova": {},
-  "server": {
-    "url": "http://192.168.0.207:8100",
-    "cleartext": true
-  }
+  "cordova": {}
 }
